@@ -6,7 +6,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   </head>
   <body>
-    <header class="main-header" data-test="header">
+    <!-- Header -->
+    <header class="main-header">
       <img src="images/header/logo.svg" width="140" height="70" alt="Логотип сайта" class="header-logo">
       <nav class="navigation">
         <!-- Навигация по сайту -->
@@ -22,39 +23,39 @@
           </li>
         </ul>
         <!-- Навигация пользователя -->
-        <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
-              <span class="visually-hidden">
-                Поиск
-              </span>
+        <ul class="navigation-user">
+          <li class="navigation-user-item">
+            <a class="navigation-user-link navigation-user-link-search" href="#">
+              <span class="visually-hidden">Поиск</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
-              <span class="visually-hidden">
-                Корзина
-              </span>
+          <li class="navigation-user-item">
+            <a class="navigation-user-link navigation-user-link-favorite" href="#">
+              <span class="visually-hidden">Избранное</span>
+              <span class="notification-badge">12</span>
             </a>
           </li>
         </ul>
-        <a class="button navigation-button" href="#">Хочу сюда!</a>
       </nav>
+      <a class="navigation-button" href="#">Хочу сюда!</a>
     </header>
-    <main class="main-inner" data-test="main">
-      <header class="inner-header">
+    <!-- Main -->
+    <main class="main-inner">
+      <!-- Шапка раздела фильтр -->
+      <header class="filter-header">
         <h1 class="inner-title">Гостиницы Седоны</h1>
         <!-- "Хлебные крошки" -->
-        <ul class="breadcrumbs">
+        <ol class="breadcrumbs">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">Главная</a>
           </li>
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="#">Гостиницы</a>
           </li>
-        </ul>
+        </ol>
       </header>
-      <section class="filter" data-test="filter">
+      <!-- Фильтр -->
+      <section class="filter">
         <!-- Форма фильтрации гостиниц -->
         <form class="filter-form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="filter-form-group">
@@ -121,25 +122,27 @@
           <input class="button" type="reset" value="Сбросить">
         </form>
       </section>
-      <section class="catalog" data-test="catalog">
+      <!-- Каталог -->
+      <section class="catalog">
         <h2 class="catalog-title">Найдено гостиниц: 38</h2>
+        <!-- Сортировка -->
         <select class="select-control" aria-label="Сортировка">
           <option value="cheap">Сначала дешёвое</option>
         </select>
         <!-- Метод изображения каталога гостиниц -->
-        <ul class="catalog-list">
-          <li class="catalog-item">
-            <a class="catalog-link" href="#"></a>
+        <ul class="catalog-method-list">
+          <li class="catalog-method-item">
+            <a class="catalog-method-link" href="#"></a>
           </li>
-          <li class="catalog-item">
-            <a class="catalog-link" href="#"></a>
+          <li class="catalog-method-item">
+            <a class="catalog-method-link" href="#"></a>
           </li>
-          <li class="catalog-item">
-            <a class="catalog-link" href="#"></a>
+          <li class="catalog-method-item">
+            <a class="catalog-method-link" href="#"></a>
           </li>
         </ul>
         <!-- Каталог отфильтрованных гостиниц -->
-        <ul class="catalog-list catalog-hotels">
+        <ul class="catalog-list">
           <li class="catalog-item">
             <a class="catalog-link" href="#">
               <img class="catalog-picture" src="images/catalog/hotel-1.jpg" width="300" height="212" alt="Расщелина между скалами, ночное звездное небо">
@@ -181,6 +184,7 @@
             <a class="button button-rating" href="#">Рейтинг: 5,0</a>
           </li>
         </ul>
+        <!-- Пагинация -->
         <ul class="pagination">
           <li class="pagination-item">
             <a class="pagination-link pagination-current" href="#">1</a>
@@ -202,18 +206,25 @@
           </li>
         </ul>
       </section>
-      <section class="subscribe" data-test="subscribe">
+      <!-- Подписка на рассылку -->
+      <section class="subscribe">
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-        <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
         <!-- Форма для подписки на рассылку -->
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input type="email" name="subscribe-email" id="subscribe-email" placeholder="Ваш e-mail"><br>
-            <button class="button subscribe-form-button">Подписаться</button>
+            <p class="subscirbe-form-name">
+              <label for="user-email" class="visually-hidden">Ваш e-mail</label>
+              <input type="email" name="user-email" id="user-email" placeholder="Ваш e-mail">
+            </p>
+            <button class="subscribe-button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
-    <footer class="main-footer" data-test="footer">
+    <!-- Footer -->
+    <footer class="main-footer">
+      <!-- Социальные сети -->
       <section class="footer-social">
+        <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="footer-social-list">
           <li class="footer-social-item">
             <a class="button" href="https://vk.com/htmlacademy">
@@ -232,7 +243,9 @@
           </li>
         </ul>
       </section>
+      <!-- Контакты -->
       <section class="footer-contacts">
+        <h2 class="visually-hidden">Контакты</h2>
         <a class="footer-contacts-item" href="tel:88128121212">+7 (812) 812-12-12</a>
         <a class="htmlacademy-link" href="https://htmlacademy.ru/">
           <img class="htmlacademy-logo" src="images/logo-htmlacademy.png" width="115" height="33" alt="Логотип htmlacademy">
