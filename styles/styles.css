@@ -23,6 +23,13 @@ body {
   color: #333333;
 }
 
+.title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -48,6 +55,10 @@ body {
   color: #333333;
   font-size: 20px;
   line-height: 24px;
+}
+
+.navigation-link-current {
+  border-bottom: 2px solid #756257;
 }
 
 .navigation-user-link-search::before {
@@ -95,13 +106,6 @@ body {
 /* Advantages */
 .advantages {
   text-align: center;
-}
-
-.lead {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
 }
 
 .lead + p {
@@ -196,13 +200,6 @@ body {
   text-align: center;
 }
 
-.search-title {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-}
-
 .search-decription {
   font-size: 22px;
   line-height: 26px;
@@ -230,11 +227,9 @@ body {
   text-align: center;
 }
 
-.subscribe-title {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
+.subscribe-title + p {
+  font-size: 22px;
+  line-height: 26px;
 }
 
 .subscirbe-form-name input {
@@ -242,7 +237,7 @@ body {
   font-size: 18px;
   line-height: 24px;
   border: none;
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 4px 0 0 4px;
 }
 
 .subscribe-button {
@@ -254,6 +249,44 @@ body {
   line-height: 36px;
   border: none;
   border-radius: 4px;
+}
+
+
+/* Catalog.html sections */
+/* Filter */
+.filter {
+  background-image: url(../images/filter.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.inner-title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.breadcrumbs-item:first-child {
+  padding-right: 20px;
+}
+
+.breadcrumbs-item:first-child a::before {
+  content: "";
+  display: block;
+  width: 13px;
+  height: 13px;
+  background-image: url(../images/breadcrumbs/main.svg);
+  background-repeat: no-repeat;
+}
+
+.arrow {
+  display: block;
+  width: 7px;
+  height: 10px;
+  background-image: url(../images/breadcrumbs/arrow.svg);
+  background-repeat: no-repeat;
 }
 
 
