@@ -8,7 +8,7 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="main-header">
+    <header class="main-header" data-test="header">
       <!-- Логотип -->
       <a href="index.html">
         <img src="images/header/logo.svg" width="140" height="70" alt="Логотип сайта" class="header-logo">
@@ -44,9 +44,9 @@
       <a class="header-button" href="#">Хочу сюда!</a>
     </header>
     <!-- Main -->
-    <main class="main-inner">
+    <main class="main-inner" data-test="main">
       <!--  -->
-      <div class="navigation-container">
+      <div class="background-container">
         <h1 class="inner-title">Гостиницы Седоны</h1>
         <!-- "Хлебные крошки" -->
         <ol class="breadcrumbs-list">
@@ -58,7 +58,7 @@
           </li>
         </ol>
         <!-- Фильтр -->
-        <section class="filter">
+        <section class="filter" data-test="filter">
           <h2 class="visually-hidden">Фильтрация</h2>
           <!-- Форма фильтрации гостиниц -->
           <form class="filter-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -88,7 +88,7 @@
             </fieldset>
             <!-- Тип жилья -->
             <fieldset class="filter-form-group">
-              <legend class="filter-form-title">Тип жилья:</legend>
+              <legend class="filter-form-title">Тип Жилья:</legend>
               <ul class="filter-form-list">
                 <li class="filter-form-item">
                   <label class="control">
@@ -114,11 +114,11 @@
             <fieldset class="filter-form-group">
               <legend class="filter-form-title">Стоимость, ₽:</legend>
               <label class="control">
-                от
+                От
                 <input class="control-input" type="text" name="from" value="0">
               </label>
               <label class="control">
-                до
+                До
                 <input class="control-input" type="text" name="to" value="9000">
               </label>
                 <button class="control-button"></button>
@@ -130,7 +130,7 @@
         </section>
       </div>
       <!-- Каталог -->
-      <section class="catalog">
+      <section class="catalog" data-test="catalog">
         <h2 class="visually-hidden">Каталог</h2>
         <!-- Sorting-container -->
         <div class="sorting-container">
@@ -140,7 +140,7 @@
           </p>
           <!-- Сортировка -->
           <select class="select-control" aria-label="Сортировка">
-            <option value="cheap">Сначала дешёвое</option>
+            <option value="cheap">Сначала дешёвые</option>
           </select>
           <!-- Метод изображения каталога гостиниц -->
           <ul class="catalog-method-list">
@@ -162,40 +162,52 @@
               <img class="catalog-picture" src="images/catalog/hotel-1.jpg" width="300" height="212" alt="Расщелина между скалами, ночное звездное небо">
               <h3 class="catalog-title">Amara Resort & Spa</h3>
             </a>
-            <p class="catalog-description">Гостиница <b class="catalog-price">От 4000 ₽</b></p>
+            <p class="catalog-description">Гостиница</p>
+            <p class="catalog-price">От 4000 ₽</p>
             <a class="button button-more" href="#">Подробнее</a>
             <a class="button button-favorites" href="#">В избранное</a>
-            <a class="button button-rating" href="#">Рейтинг: 8,5</a>
+            <p class="raiting">
+              <a class="button button-rating" href="#">Рейтинг: 8,5</a>
+            </p>
           </li>
           <li class="catalog-item">
             <a class="catalog-link" href="#">
               <img class="catalog-picture" src="images/catalog/hotel-2.jpg" width="300" height="212" alt="Деревья, горы, пасмурное небо и радуга после дождя">
               <h3 class="catalog-title">Villas at Poco Diablo</h3>
             </a>
-            <p class="catalog-description">Гостиница <b class="catalog-price">От 5000 ₽</b></p>
+            <p class="catalog-description">Гостиница</p>
+            <p class="catalog-price">От 5000 ₽</p>
             <a class="button button-more" href="#">Подробнее</a>
             <a class="button button-favorites button-favorites-current" href="#">В избранном</a>
-            <a class="button button-rating" href="#">Рейтинг: 9,2</a>
+            <p class="raiting">
+              <a class="button button-rating" href="#">Рейтинг: 9,2</a>
+            </p>
           </li>
           <li class="catalog-item">
             <a class="catalog-link" href="#">
               <img class="catalog-picture" src="images/catalog/hotel-3.jpg" width="300" height="212" alt="Деревья, гора, вечернее небо">
               <h3 class="catalog-title">Desert Quail Inn</h3>
             </a>
-            <p class="catalog-description">Гостиница <b class="catalog-price">От 2500 ₽</b></p>
+            <p class="catalog-description">Гостиница</p>
+            <p class="catalog-price">От 2500 ₽</p>
             <a class="button button-more" href="#">Подробнее</a>
             <a class="button button-favorites" href="#">В избранное</a>
-            <a class="button button-rating" href="#">Рейтинг: 6,9</a>
+            <p class="raiting">
+              <a class="button button-rating" href="#">Рейтинг: 6,9</a>
+            </p>
           </li>
           <li class="catalog-item">
             <a class="catalog-link" href="#">
               <img class="catalog-picture" src="images/catalog/hotel-4.jpg" width="300" height="212" alt="Гора, ночное звездное небо">
               <h3 class="catalog-title">GreenTree Inn</h3>
             </a>
-            <p class="catalog-description">Гостиница <b class="catalog-price">От 1500 ₽</b></p>
+            <p class="catalog-description">Гостиница</p>
+            <p class="catalog-price">От 1500 ₽</p>
             <a class="button button-more" href="#">Подробнее</a>
             <a class="button button-favorites" href="#">В избранное</a>
-            <a class="button button-rating" href="#">Рейтинг: 5,0</a>
+            <p class="raiting">
+              <a class="button button-rating" href="#">Рейтинг: 5,0</a>
+            </p>
           </li>
         </ul>
         <!-- Пагинация -->
@@ -221,8 +233,8 @@
         </ul>
       </section>
       <!-- Подписка на рассылку -->
-      <section class="subscribe">
-        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+      <section class="subscribe-inner" data-test="subscribe">
+        <h2 class="title subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <!-- Форма для подписки на рассылку -->
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -235,7 +247,7 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer class="main-footer">
+    <footer class="main-footer" data-test="footer">
       <!-- Социальные сети -->
       <section class="footer-social">
         <h2 class="visually-hidden">Социальные сети</h2>

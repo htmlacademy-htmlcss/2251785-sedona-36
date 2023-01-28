@@ -19,7 +19,7 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  background-color: #ffffff;
+  background: #F2F2F2;
   color: #333333;
 }
 
@@ -28,6 +28,18 @@ body {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+}
+
+.button {
+  background: #756157;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .visually-hidden {
@@ -80,7 +92,11 @@ body {
 }
 
 .notification-badge {
-  padding-left: 20px;
+  background: #7DB54F;
+  color: #ffffff;
+  margin-left: 20px;
+  font-size: 10px;
+  line-height: 10px;
 }
 
 .header-button {
@@ -89,7 +105,6 @@ body {
   text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
-  border-radius: 4px;
 }
 
 
@@ -104,8 +119,14 @@ body {
 
 
 /* Advantages */
-.advantages {
+/*-- Так предлагает эталонная вёрстка --*/
+.advantages h3, .advantages p {
   text-align: center;
+}
+/*-- --*/
+
+.lead {
+  color: #000000;
 }
 
 .lead + p {
@@ -213,7 +234,6 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  border-radius: 4px;
 }
 
 
@@ -224,20 +244,15 @@ body {
   background-size: 100% auto;
   background-color: #000000;
   color: #ffffff;
-  text-align: center;
 }
 
-/*-- Subscirbe in catalog --*/
-.main-inner .subscribe {
-  background-image: none;
+.subscribe-inner {
   color: #000000;
-  background-color: #ffffff;
 }
 
-.main-inner .subscribe-description {
+.subscribe-description {
   color: #333333;
 }
-/*-- --*/
 
 .subscribe-title + p {
   font-size: 22px;
@@ -245,11 +260,8 @@ body {
 }
 
 .subscirbe-form-name input {
-  background: #F2F2F2;
   font-size: 18px;
   line-height: 24px;
-  border: none;
-  border-radius: 4px 0 0 4px;
 }
 
 .subscribe-button {
@@ -260,13 +272,12 @@ body {
   font-size: 20px;
   line-height: 36px;
   border: none;
-  border-radius: 4px;
 }
 
 
 /*-------------------- Catalog.html sections --------------------*/
 /* Filter */
-.navigation-container {
+.background-container {
   background-image: url(../images/filter.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -304,17 +315,29 @@ body {
   line-height: 23px;
 }
 
-.button {
-  background: #756157;
-  color: #FFFFFF;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: none;
-  border-radius: 4px;
+/*-- Так предлагает эталонная вёрстка --*/
+.filter-form-group:last-of-type .control {
+  color: #000000;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 24px;
+}
+/*--  --*/
+
+.control-input {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.control-input[name="from"] {
+  background: #F2F2F2;
+  border: none;
+}
+
+.control-input[name="to"] {
+  background: #F2F2F2;
+  border: none;
 }
 
 .button-apply {
@@ -325,28 +348,10 @@ body {
   background-color: transparent;
 }
 
-.control-input {
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.control-input[name="from"] {
-  background: #F2F2F2;
-  border: none;
-  border-radius: 4px 0 0 4px;
-}
-
-.control-input[name="to"] {
-  background: #F2F2F2;
-  border: none;
-  border-radius: 0 4px 4px 0;
-}
-
-
 /* Catalog */
 .select-control {
-  border: 2px solid #E5E5E5;
-  border-radius: 4px;
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .catalog-method-item:nth-child(1) .catalog-method-link::before {

@@ -8,7 +8,7 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="main-header">
+    <header class="main-header" data-test="header">
       <!-- Логотип -->
       <a>
         <img src="images/header/logo.svg" width="140" height="70" alt="Логотип сайта" class="header-logo">
@@ -44,14 +44,14 @@
       <a class="button header-button" href="#">Хочу сюда!</a>
     </header>
     <!-- Main -->
-    <main class="main-index">
+    <main class="main-index" data-test="main">
       <!-- Hero Section -->
-      <section class="hero">
+      <section class="hero" data-test="hero">
         <h1 class="visually-hidden">Седона - городок в Аризоне</h1>
         <img class="hero-picture" src="images/hero-section/logo-full.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!">
       </section>
       <!-- Преимущества -->
-      <section class="advantages">
+      <section class="advantages" data-test="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
         <p class="lead title">
           Седона — небольшой городок в Аризоне, заслуживающий большего!
@@ -84,40 +84,40 @@
             <img class="advantages-picture" src="images/advantages/photo-2.jpg" width="800" height="384" alt="Мост Дьявола">
           </li>
         </ul>
-      </section>
-      <!-- Инфраструктура -->
-      <section class="infrastructure">
-        <h2 class="visually-hidden">Инфраструктура</h2>
-        <p class="lead title">
-          Приезжайте в Седону отдохнуть в комфорте и уюте!
-        </p>
-        <p>
-          Опытный персонал и качественное обслуживание!
-        </p>
-        <!-- Список инфраструктуры -->
-        <ul class="infrastructure-list">
-          <li class="infrastructure-item">
-            <h3 class="infrastructure-title">Жильё</h3>
-            <p class="infrastructure-description">
-              Рекомендуем пожить в настоящем мотеле, всё как в кино!
-            </p>
-          </li>
-          <li class="infrastructure-item">
-            <h3 class="infrastructure-title">Еда</h3>
-            <p class="infrastructure-description">
-              Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
-            </p>
-          </li>
-          <li class="infrastructure-item">
-            <h3 class="infrastructure-title">Сувениры</h3>
-            <p class="infrastructure-description">
-              Не только китайского, но и настоящего местного производства!
-            </p>
-          </li>
-        </ul>
+        <!-- Инфраструктура -->
+        <section class="infrastructure">
+          <h2 class="visually-hidden">Инфраструктура</h2>
+          <p class="lead title">
+            Приезжайте в Седону отдохнуть в комфорте и уюте!
+          </p>
+          <p>
+            Опытный персонал и качественное обслуживание!
+          </p>
+          <!-- Список инфраструктуры -->
+          <ul class="infrastructure-list">
+            <li class="infrastructure-item">
+              <h3 class="infrastructure-title">Жильё</h3>
+              <p class="infrastructure-description">
+                Рекомендуем пожить в настоящем мотеле, всё как в кино!
+              </p>
+            </li>
+            <li class="infrastructure-item">
+              <h3 class="infrastructure-title">Еда</h3>
+              <p class="infrastructure-description">
+                Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
+              </p>
+            </li>
+            <li class="infrastructure-item">
+              <h3 class="infrastructure-title">Сувениры</h3>
+              <p class="infrastructure-description">
+                Не только китайского, но и настоящего местного производства!
+              </p>
+            </li>
+          </ul>
+        </section>
       </section>
       <!-- Поиск гостиницы -->
-      <section class="search">
+      <section class="search" data-test="search">
         <h2 class="search-title title">Заинтересовались?</h2>
         <p class="search-decription">
           Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
@@ -125,7 +125,7 @@
         <a class="search-button" href="">Поиск гостиницы в Седоне</a>
       </section>
       <!-- Подписка на рассылку -->
-      <section class="subscribe">
+      <section class="subscribe" data-test="subscribe">
         <h2 class="subscribe-title title">Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
         <!-- Форма для подписки на рассылку -->
@@ -139,7 +139,7 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer class="main-footer">
+    <footer class="main-footer" data-test="footer">
       <!-- Социальные сети -->
       <section class="footer-social">
         <h2 class="visually-hidden">Социальные сети</h2>
