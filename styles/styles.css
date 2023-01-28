@@ -112,7 +112,7 @@ body {
 .hero {
   background-image: url(../images/hero-section/hero-background.jpg);
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 100% 100%;
   background-color: #000000;
   color: #ffffff;
 }
@@ -237,6 +237,174 @@ body {
 }
 
 
+/*-------------------- Catalog.html sections --------------------*/
+/*-- Background-container --*/
+.background-container {
+  background-image: url(../images/filter.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.inner-title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+}
+
+/* Breadcrumbs */
+.breadcrumbs-item:first-child {
+  padding-right: 20px;
+}
+
+.breadcrumbs-item:first-child a::before {
+  content: "";
+  display: block;
+  width: 13px;
+  height: 13px;
+  background-image: url(../images/breadcrumbs/main.svg);
+  background-repeat: no-repeat;
+}
+
+/* Filter */
+.filter-form-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.control {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+/*- Так предлагает эталонная вёрстка -*/
+.filter-form-group:last-of-type .control {
+  color: #000000;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+/*-  -*/
+
+.control-input {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.control-input[name="from"] {
+  background: #F2F2F2;
+  border: none;
+}
+
+.control-input[name="to"] {
+  background: #F2F2F2;
+  border: none;
+}
+
+.button-apply {
+  background: #82B3D3;
+}
+
+.button-reset {
+  background-color: transparent;
+}
+/*-- --*/
+
+/* Catalog */
+/*-- Sorting container --*/
+/* Сортировка */
+.select-control {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+/* Метод изображения каталога гостиниц */
+.catalog-method-item:nth-child(1) .catalog-method-link::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 14px;
+  background-image: url(../images/catalog-method/little-cards.svg);
+  background-repeat: no-repeat;
+}
+
+.catalog-method-item:nth-child(2) .catalog-method-link::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 14px;
+  background-image: url(../images/catalog-method/big-cards.svg);
+  background-repeat: no-repeat;
+}
+
+.catalog-method-item:nth-child(3) .catalog-method-link::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 14px;
+  background-image: url(../images/catalog-method/list.svg);
+  background-repeat: no-repeat;
+}
+/*-- --*/
+
+/* Каталог отфильтрованных гостиниц */
+.catalog-link {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.catalog-description {
+  color: #333333;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.catalog-price {
+  font-weight: 400;
+}
+
+.button-more {
+  background: #756157;
+}
+
+.button-favorites {
+  background: #82B3D3;
+}
+
+.button-favorites-current {
+  background: #7DB54F;
+}
+
+.button-rating {
+  font-weight: 400;
+  background: #F2F2F2;
+  color: #333333;
+}
+
+/* Пагинация */
+.pagination-link {
+  background: #82B3D3;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.pagination-link-current {
+  background: #F2F2F2;
+  color: #000000;
+}
+/*-------------------- --------------------*/
+
+
 /* Subscirbe */
 .subscribe {
   background-image: url(../images/subscribe.jpg);
@@ -275,166 +443,8 @@ body {
 }
 
 
-/*-------------------- Catalog.html sections --------------------*/
-/* Filter */
-.background-container {
-  background-image: url(../images/filter.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-color: #000000;
-  color: #ffffff;
-}
-
-.inner-title {
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 78px;
-}
-
-.breadcrumbs-item:first-child {
-  padding-right: 20px;
-}
-
-.breadcrumbs-item:first-child a::before {
-  content: "";
-  display: block;
-  width: 13px;
-  height: 13px;
-  background-image: url(../images/breadcrumbs/main.svg);
-  background-repeat: no-repeat;
-}
-
-.filter-form-title {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-}
-
-.control {
-  font-size: 18px;
-  line-height: 23px;
-}
-
-/*-- Так предлагает эталонная вёрстка --*/
-.filter-form-group:last-of-type .control {
-  color: #000000;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
-}
-/*--  --*/
-
-.control-input {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.control-input[name="from"] {
-  background: #F2F2F2;
-  border: none;
-}
-
-.control-input[name="to"] {
-  background: #F2F2F2;
-  border: none;
-}
-
-.button-apply {
-  background: #82B3D3;
-}
-
-.button-reset {
-  background-color: transparent;
-}
-
-/* Catalog */
-.select-control {
-  font-size: 18px;
-  line-height: 21px;
-}
-
-.catalog-method-item:nth-child(1) .catalog-method-link::before {
-  content: "";
-  display: block;
-  width: 16px;
-  height: 14px;
-  background-image: url(../images/catalog-method/little-cards.svg);
-  background-repeat: no-repeat;
-}
-
-.catalog-method-item:nth-child(2) .catalog-method-link::before {
-  content: "";
-  display: block;
-  width: 16px;
-  height: 14px;
-  background-image: url(../images/catalog-method/big-cards.svg);
-  background-repeat: no-repeat;
-}
-
-.catalog-method-item:nth-child(3) .catalog-method-link::before {
-  content: "";
-  display: block;
-  width: 16px;
-  height: 14px;
-  background-image: url(../images/catalog-method/list.svg);
-  background-repeat: no-repeat;
-}
-
-.catalog-link {
-  color: #000000;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-}
-
-.catalog-description {
-  color: #333333;
-  font-size: 18px;
-  line-height: 21px;
-}
-
-.catalog-price {
-  font-weight: 400;
-}
-
-.button-more {
-  background: #756157;
-}
-
-.button-favorites {
-  background: #82B3D3;
-}
-
-.button-favorites-current {
-  background: #7DB54F;
-}
-
-.button-rating {
-  font-weight: 400;
-  background: #F2F2F2;
-  color: #333333;
-}
-
-.pagination-link {
-  background: #82B3D3;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
-}
-
-.pagination-link-current {
-  background: #F2F2F2;
-  color: #000000;
-}
-
-
 /* Footer */
-.footer-social-item:nth-child(1) .button::before {
+.footer-social-item:nth-child(1) .social-button::before {
   content: "";
   display: block;
   width: 24px;
@@ -443,7 +453,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.footer-social-item:nth-child(2) .button::before {
+.footer-social-item:nth-child(2) .social-button::before {
   content: "";
   display: block;
   width: 18px;
@@ -452,7 +462,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.footer-social-item:nth-child(3) .button::before {
+.footer-social-item:nth-child(3) .social-button::before {
   content: "";
   display: block;
   width: 22px;
