@@ -399,7 +399,7 @@ body {
 }
 
 .pagination-link-current {
-  background: #F2F2F2;
+  background-color: #F2F2F2;
   color: #000000;
 }
 /*-------------------- --------------------*/
@@ -415,6 +415,7 @@ body {
 }
 
 .subscribe-inner {
+  background-color: #F2F2F2;
   color: #000000;
 }
 
