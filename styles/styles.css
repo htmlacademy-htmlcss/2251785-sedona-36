@@ -227,6 +227,18 @@ body {
   text-align: center;
 }
 
+/*-- Subscirbe in catalog --*/
+.main-inner .subscribe {
+  background-image: none;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.main-inner .subscribe-description {
+  color: #333333;
+}
+/*-- --*/
+
 .subscribe-title + p {
   font-size: 22px;
   line-height: 26px;
@@ -252,9 +264,9 @@ body {
 }
 
 
-/* Catalog.html sections */
+/*-------------------- Catalog.html sections --------------------*/
 /* Filter */
-.filter {
+.navigation-container {
   background-image: url(../images/filter.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -281,12 +293,138 @@ body {
   background-repeat: no-repeat;
 }
 
-.arrow {
+.filter-form-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.control {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.button {
+  background: #756157;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.button-apply {
+  background: #82B3D3;
+}
+
+.button-reset {
+  background-color: transparent;
+}
+
+.control-input {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.control-input[name="from"] {
+  background: #F2F2F2;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.control-input[name="to"] {
+  background: #F2F2F2;
+  border: none;
+  border-radius: 0 4px 4px 0;
+}
+
+
+/* Catalog */
+.select-control {
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+}
+
+.catalog-method-item:nth-child(1) .catalog-method-link::before {
+  content: "";
   display: block;
-  width: 7px;
-  height: 10px;
-  background-image: url(../images/breadcrumbs/arrow.svg);
+  width: 16px;
+  height: 14px;
+  background-image: url(../images/catalog-method/little-cards.svg);
   background-repeat: no-repeat;
+}
+
+.catalog-method-item:nth-child(2) .catalog-method-link::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 14px;
+  background-image: url(../images/catalog-method/big-cards.svg);
+  background-repeat: no-repeat;
+}
+
+.catalog-method-item:nth-child(3) .catalog-method-link::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 14px;
+  background-image: url(../images/catalog-method/list.svg);
+  background-repeat: no-repeat;
+}
+
+.catalog-link {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.catalog-description {
+  color: #333333;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.catalog-price {
+  font-weight: 400;
+}
+
+.button-more {
+  background: #756157;
+}
+
+.button-favorites {
+  background: #82B3D3;
+}
+
+.button-favorites-current {
+  background: #7DB54F;
+}
+
+.button-rating {
+  font-weight: 400;
+  background: #F2F2F2;
+  color: #333333;
+}
+
+.pagination-link {
+  background: #82B3D3;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.pagination-link-current {
+  background: #F2F2F2;
+  color: #000000;
 }
 
 

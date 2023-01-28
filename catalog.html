@@ -45,24 +45,24 @@
     </header>
     <!-- Main -->
     <main class="main-inner">
-      <!-- Фильтр -->
-      <section class="filter">
+      <!--  -->
+      <div class="navigation-container">
         <h1 class="inner-title">Гостиницы Седоны</h1>
         <!-- "Хлебные крошки" -->
         <ol class="breadcrumbs-list">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html" aria-label="Главная"></a>
           </li>
-          <span class="arrow"></span>
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link">Гостиницы</a>
           </li>
         </ol>
-        <!-- Main-Filter -->
-        <section class="main-filter">
+        <!-- Фильтр -->
+        <section class="filter">
           <h2 class="visually-hidden">Фильтрация</h2>
           <!-- Форма фильтрации гостиниц -->
           <form class="filter-form" action="https://echo.htmlacademy.ru/" method="post">
+            <!-- Инфраструктура -->
             <fieldset class="filter-form-group">
               <legend class="filter-form-title">Инфраструктура:</legend>
               <ul class="filter-form-list">
@@ -86,6 +86,7 @@
                 </li>
               </ul>
             </fieldset>
+            <!-- Тип жилья -->
             <fieldset class="filter-form-group">
               <legend class="filter-form-title">Тип жилья:</legend>
               <ul class="filter-form-list">
@@ -109,48 +110,51 @@
                 </li>
               </ul>
             </fieldset>
+            <!-- Стоимость -->
             <fieldset class="filter-form-group">
               <legend class="filter-form-title">Стоимость, ₽:</legend>
               <label class="control">
-                От
+                от
                 <input class="control-input" type="text" name="from" value="0">
               </label>
               <label class="control">
-                До
+                до
                 <input class="control-input" type="text" name="to" value="9000">
               </label>
-                <button class="button control-button"></button>
-                <button class="button control-button"></button>
-
+                <button class="control-button"></button>
+                <button class="control-button"></button>
             </fieldset>
-            <input class="button" type="submit" value="Применить">
-            <input class="button" type="reset" value="Сбросить">
+            <input class="button button-apply" type="submit" value="Применить">
+            <input class="button button-reset" type="reset" value="Сбросить">
           </form>
         </section>
-      </section>
+      </div>
       <!-- Каталог -->
       <section class="catalog">
         <h2 class="visually-hidden">Каталог</h2>
-        <p class="search">
-          Найдено гостиниц:
-          <span class="search-result">38</span>
-        </p>
-        <!-- Сортировка -->
-        <select class="select-control" aria-label="Сортировка">
-          <option value="cheap">Сначала дешёвое</option>
-        </select>
-        <!-- Метод изображения каталога гостиниц -->
-        <ul class="catalog-method-list">
-          <li class="catalog-method-item">
-            <a class="catalog-method-link" href="#"></a>
-          </li>
-          <li class="catalog-method-item">
-            <a class="catalog-method-link" href="#"></a>
-          </li>
-          <li class="catalog-method-item">
-            <a class="catalog-method-link" href="#"></a>
-          </li>
-        </ul>
+        <!-- Sorting-container -->
+        <div class="sorting-container">
+          <p class="catalog-title title">
+            Найдено гостиниц:
+            <span class="search-result">38</span>
+          </p>
+          <!-- Сортировка -->
+          <select class="select-control" aria-label="Сортировка">
+            <option value="cheap">Сначала дешёвое</option>
+          </select>
+          <!-- Метод изображения каталога гостиниц -->
+          <ul class="catalog-method-list">
+            <li class="catalog-method-item catalog-method-item-current">
+              <a class="catalog-method-link" href="#" aria-label="Маленькие карточки"></a>
+            </li>
+            <li class="catalog-method-item">
+              <a class="catalog-method-link" href="#" aria-label="Большие карточки"></a>
+            </li>
+            <li class="catalog-method-item">
+              <a class="catalog-method-link" href="#" aria-label="Список"></a>
+            </li>
+          </ul>
+        </div>
         <!-- Каталог отфильтрованных гостиниц -->
         <ul class="catalog-list">
           <li class="catalog-item">
@@ -170,7 +174,7 @@
             </a>
             <p class="catalog-description">Гостиница <b class="catalog-price">От 5000 ₽</b></p>
             <a class="button button-more" href="#">Подробнее</a>
-            <a class="button button-favorites button-favorites-current" href="#">В избранное</a>
+            <a class="button button-favorites button-favorites-current" href="#">В избранном</a>
             <a class="button button-rating" href="#">Рейтинг: 9,2</a>
           </li>
           <li class="catalog-item">
@@ -197,7 +201,7 @@
         <!-- Пагинация -->
         <ul class="pagination">
           <li class="pagination-item">
-            <a class="pagination-link pagination-current">1</a>
+            <a class="pagination-link pagination-link-current">1</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">2</a>
@@ -219,7 +223,7 @@
       <!-- Подписка на рассылку -->
       <section class="subscribe">
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-        <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <!-- Форма для подписки на рассылку -->
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <p class="subscirbe-form-name">
