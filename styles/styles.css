@@ -15,12 +15,34 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   background: #F2F2F2;
   color: #333333;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+.main-index-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.header-container, .footer-container {
+  width: 1060px;
+  margin: 0 auto;
 }
 
 .title {
@@ -57,10 +79,35 @@ body {
 
 
 /* Header */
+.header-container {
+  display: flex;
+}
+
 .main-header a {
-  text-align: center;
   text-decoration: none;
+  text-align: center;
   font-weight: 700;
+}
+
+.logo-header {
+  margin-right: 30px;
+}
+
+.navigation {
+  width: 870px;
+  display: flex;
+}
+
+.navigation-list {
+  padding: 0;
+  list-style: none;
+  width: 440px;
+}
+
+.navigation-user {
+  max-width: 135px;
+  margin-right: 20px;
+  margin-left: auto;
 }
 
 .navigation-link, .navigation-user-link {
@@ -115,6 +162,7 @@ body {
   background-size: 100% auto;
   background-color: #000000;
   color: #ffffff;
+  text-align: center;
 }
 
 
@@ -127,6 +175,15 @@ body {
 
 .lead {
   color: #000000;
+  margin: 0 auto;
+}
+
+.lead-advantages {
+  width: 620px;
+}
+
+.lead-infrastructure {
+  width: 505px;
 }
 
 .lead + p {
@@ -134,7 +191,19 @@ body {
   line-height: 26px;
 }
 
+.advantages-list {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.item-container {
+  width: 400px;
+}
+
 .advantages-item {
+  width: 400px;
   background: rgba(131, 179, 211, 0.12);
 }
 
@@ -143,11 +212,22 @@ body {
 }
 
 .advantages-item-wide {
+  display: flex;
+  width: 100%;
   background-color: #82B3D3;
   color: #ffffff;
 }
 
+.advantages-item h3, .advantages-item p {
+  margin: 0 auto;
+}
+
+.advantages-item img {
+  display: block;
+}
+
 .advantages-title {
+  width: 175px;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 24px;
@@ -168,14 +248,27 @@ body {
   background: rgba(255, 255, 255, 0.3);
 }
 
+.advantages-description {
+  width: 230px;
+}
 
 /* Infrastructure */
-.infrastructure {
-  text-align: center;
+.infrastructure-list {
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.infrastructure-item {
+  width: 400px;
 }
 
 .infrastructure-item:not(:nth-child(2)) {
   background: rgba(131, 179, 211, 0.12);
+}
+
+.infrastructure-item h3, .infrastructure-item p {
+  margin: 0 auto;
 }
 
 .infrastructure-title {
@@ -215,18 +308,29 @@ body {
   margin: 0 auto;
 }
 
+.infrastructure-description {
+  width: 230px;
+}
+
 
 /* Search */
 .search {
   text-align: center;
 }
 
+.search-decription, .search-button {
+  margin: 0 auto;
+}
+
 .search-decription {
+  width: 590px;
   font-size: 22px;
   line-height: 26px;
 }
 
 .search-button {
+  display: block;
+  width: 380px;
   background-color: #756157;
   color: #ffffff;
   text-transform: uppercase;
@@ -242,7 +346,7 @@ body {
 .background-container {
   background-image: url(../images/filter.jpg);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100% auto;
   background-color: #000000;
   color: #ffffff;
 }
@@ -412,6 +516,11 @@ body {
   background-size: 100% auto;
   background-color: #000000;
   color: #ffffff;
+  text-align: center;
+}
+
+.subscribe h2, .subscribe p, .subscribe form {
+  margin: 0 auto;
 }
 
 .subscribe-inner {
@@ -420,6 +529,10 @@ body {
 }
 
 .subscribe-description {
+  width: 475px;
+}
+
+.subscribe-inner-description {
   color: #333333;
 }
 
@@ -445,6 +558,16 @@ body {
 
 
 /* Footer */
+.footer-container {
+  display: flex;
+}
+
+.footer-social-list {
+  padding: 0;
+  width: 142px;
+  list-style: none;
+}
+
 .footer-social-item:nth-child(1) .social-button::before {
   content: "";
   display: block;
@@ -472,11 +595,19 @@ body {
   background-repeat: no-repeat;
 }
 
+.footer-contacts {
+  width: 680px;
+  margin-left: auto;
+}
+
 .footer-contacts-item {
   color: #000000;
   text-align: center;
-  text-transform: uppercase;
   text-decoration: none;
   font-size: 40px;
   line-height: 40px;
+}
+
+.htmlacademy-link {
+  float: right;
 }
