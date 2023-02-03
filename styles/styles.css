@@ -103,25 +103,32 @@ body {
   font-weight: 700;
 }
 
-.logo-header {
-  margin-right: 30px;
-}
-
 .navigation {
-  width: 710px;
+  width: 610px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
 }
 
 .navigation-list {
+  display: flex;
   padding: 0;
   list-style: none;
-  width: 440px;
+}
+
+.navigation-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .navigation-user {
-  max-width: 135px;
+  display: flex;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation-user-item:not(:last-child) {
   margin-right: 20px;
-  margin-left: auto;
 }
 
 .navigation-link, .navigation-user-link {
@@ -153,15 +160,15 @@ body {
 }
 
 .notification-badge {
+  margin-left: 20px;
   background: #7DB54F;
   color: #ffffff;
-  margin-left: 20px;
   font-size: 10px;
   line-height: 10px;
 }
 
 .header-button {
-  margin-left: auto;
+  width: 160px;
   background-color: #756157;
   color: #ffffff;
   text-transform: uppercase;
@@ -642,12 +649,17 @@ body {
 /* Footer */
 .footer-container {
   display: flex;
+  justify-content: space-between;
 }
 
 .footer-social-list {
+  display: flex;
   padding: 0;
-  width: 142px;
   list-style: none;
+}
+
+.footer-social-item:not(:last-child) {
+  margin-right: 25px;
 }
 
 .footer-social-item:nth-child(1) .social-button::before {
@@ -678,8 +690,8 @@ body {
 }
 
 .footer-contacts {
-  width: 680px;
-  margin-left: auto;
+  width: 720px;
+  text-align: center;
 }
 
 .footer-contacts-item {
@@ -688,8 +700,4 @@ body {
   text-decoration: none;
   font-size: 40px;
   line-height: 40px;
-}
-
-.htmlacademy-link {
-  float: right;
 }
