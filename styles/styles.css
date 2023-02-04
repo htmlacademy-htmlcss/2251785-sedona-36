@@ -93,14 +93,6 @@ body {
 
 
 /* Header */
-.main-header {
-  margin-bottom: -10px;
-}
-
-.navigation, .header-button {
-  margin-bottom: 10px;
-}
-
 .header-container {
   display: flex;
 }
@@ -113,6 +105,7 @@ body {
 
 .logo-header {
   margin-right: 28px;
+  margin-bottom: -10px;
 }
 
 .navigation {
