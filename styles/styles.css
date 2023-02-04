@@ -115,22 +115,23 @@ body {
 
 }
 
-.navigation-list {
-  display: flex;
-  flex-wrap: wrap;
+.navigation-list, .navigation-user {
+  margin: 0;
   padding: 0;
+  display: flex;
   list-style: none;
+}
+
+.navigation-list {
+  flex-wrap: wrap;
+}
+
+.navigation-user {
+  margin-right: 20px;
 }
 
 .navigation-item {
   padding: 20px 16px;
-}
-
-.navigation-user {
-  display: flex;
-  padding: 0;
-  list-style: none;
-  margin-right: 20px;
 }
 
 .navigation-user-item {
