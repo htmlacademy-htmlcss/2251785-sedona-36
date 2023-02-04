@@ -73,6 +73,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   border: none;
+  border-radius: 4px;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -147,6 +148,7 @@ body {
 }
 
 .navigation-link-current {
+  padding-bottom: 18px;
   border-bottom: 2px solid #756257;
 }
 
@@ -287,7 +289,7 @@ body {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-  padding-bottom: 62px;
+  padding-bottom: 31px;
 }
 
 .advantages-title::after {
@@ -297,6 +299,7 @@ body {
   height: 2px;
   background: rgba(0, 0, 0, 0.3);
   margin: 0 auto;
+  margin-top: 31px;
 }
 
 .advantages-item-wide .advantages-title::after {
@@ -406,6 +409,7 @@ body {
   padding: 8px 0;
   background-color: #756157;
   color: #ffffff;
+  border-radius: 4px;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 700;
@@ -709,12 +713,16 @@ body {
 
 .subscirbe-form-name input {
   box-sizing: border-box;
+  background-color: #F2F2F2;;
   font-size: 18px;
   line-height: 24px;
   margin: 0;
   padding: 0;
+  padding-left: 20px;
   width: 452px;
   height: 52px;
+  border: none;
+  border-radius: 4px 0 0 4px;
 }
 
 .subscribe-button {
@@ -727,6 +735,7 @@ body {
   font-size: 20px;
   line-height: 36px;
   border: none;
+  border-radius: 0 4px 4px 0;
 }
 
 
