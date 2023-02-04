@@ -103,32 +103,40 @@ body {
   font-weight: 700;
 }
 
+.logo-header {
+  margin-right: 28px;
+}
+
 .navigation {
-  width: 610px;
   display: flex;
+  flex-grow: 1;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
+
 }
 
 .navigation-list {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   list-style: none;
 }
 
-.navigation-item:not(:last-child) {
-  margin-right: 30px;
+.navigation-item {
+  padding: 20px 16px;
 }
 
 .navigation-user {
   display: flex;
   padding: 0;
   list-style: none;
+  margin-right: 20px;
 }
 
-.navigation-user-item:not(:last-child) {
-  margin-right: 20px;
+.navigation-user-item {
+  min-width: 20px;
+  min-height: 20px;
+  padding: 22px 12px;
 }
 
 .navigation-link, .navigation-user-link {
@@ -168,7 +176,8 @@ body {
 }
 
 .header-button {
-  width: 160px;
+  padding: 8px 34px;
+  align-self: center;
   background-color: #756157;
   color: #ffffff;
   text-transform: uppercase;
@@ -185,21 +194,33 @@ body {
   background-color: #000218;
   color: #ffffff;
   text-align: center;
+  margin-bottom: 70px;
 }
 
+.hero-picture {
+  vertical-align: middle;
+  margin-top: 52px;
+  margin-bottom: 25px;
+}
 
 /* Advantages */
+.lead-container {
+  margin-bottom: 70px;
+}
+
 .lead {
   color: #000000;
   margin: 0 auto;
 }
 
 .lead-advantages {
-  width: 620px;
+  max-width: 620px;
+  padding-bottom: 25px;
 }
 
 .lead-infrastructure {
-  width: 505px;
+  max-width: 505px;
+  padding-bottom: 20px;
 }
 
 .lead + p {
@@ -213,10 +234,12 @@ body {
 }
 
 .advantages-list {
+  margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  margin-bottom: 64px;
 }
 
 .advantages-item {
@@ -239,12 +262,22 @@ body {
   flex-direction: row-reverse;
 }
 
-.item-container {
+.item-container-wide {
+  margin: auto 0;
   width: 400px;
 }
 
+.item-container {
+  color: #000000;
+  padding: 112px 0;
+}
+
 .advantages-item img {
-  display: block; /*Убирает отступ под картинкой*/
+  vertical-align: middle; /*Убирает отступ под картинкой*/
+}
+
+.advantages-item {
+  min-height: 384px;
 }
 
 .advantages-title {
@@ -253,6 +286,7 @@ body {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  padding-bottom: 62px;
 }
 
 .advantages-title::after {
@@ -274,6 +308,14 @@ body {
 }
 
 /* Infrastructure */
+.infrastructure {
+  margin-bottom: 96px;
+}
+
+.infrastructure .lead-container {
+  margin-bottom: 64px;
+}
+
 .infrastructure-list {
   padding: 0;
   display: flex;
@@ -282,6 +324,7 @@ body {
 
 .infrastructure-item {
   width: 400px;
+  padding: 82px 0;
 }
 
 .infrastructure-item:not(:nth-child(2)) {
@@ -293,6 +336,7 @@ body {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  padding-bottom: 30px;
 }
 
 .infrastructure-item:nth-child(1) .infrastructure-title::before {
@@ -303,26 +347,29 @@ body {
   background-image: url(../images/infrastructure/house.svg);
   background-repeat: no-repeat;
   margin: 0 auto;
+  padding-bottom: 30px;
 }
 
 .infrastructure-item:nth-child(2) .infrastructure-title::before {
   content: "";
   display: block;
-  width: 75px;
-  height: 72px;
+  width: 74px;
+  height: 70px;
   background-image: url(../images/infrastructure/food.svg);
   background-repeat: no-repeat;
   margin: 0 auto;
+  padding-bottom: 30px;
 }
 
 .infrastructure-item:nth-child(3) .infrastructure-title::before {
   content: "";
   display: block;
-  width: 75px;
-  height: 72px;
+  width: 64px;
+  height: 76px;
   background-image: url(../images/infrastructure/gift.svg);
   background-repeat: no-repeat;
   margin: 0 auto;
+  padding-bottom: 30px;
 }
 
 .infrastructure-description {
@@ -333,6 +380,12 @@ body {
 /* Search */
 .search {
   text-align: center;
+  margin-bottom: 96px
+}
+
+.search h2 {
+  margin: 0;
+  padding-bottom: 20px;
 }
 
 .search-decription, .search-button {
@@ -340,14 +393,16 @@ body {
 }
 
 .search-decription {
-  width: 590px;
+  width: 592px;
   font-size: 22px;
   line-height: 26px;
+  padding-bottom: 54px;
 }
 
 .search-button {
   display: block;
   width: 380px;
+  padding: 8px 0;
   background-color: #756157;
   color: #ffffff;
   text-transform: uppercase;
@@ -612,11 +667,22 @@ body {
   background-color: #000218;
   color: #ffffff;
   text-align: center;
+  padding-top: 96px;
+  padding-bottom: 104px;
+  margin-bottom: 40px;
 }
 
 .subscribe-inner {
   color: #000000;
   text-align: center;
+  padding-top: 96px;
+  padding-bottom: 104px;
+  margin-bottom: 40px;
+}
+
+.subscribe h2 {
+  margin: 0;
+  padding-bottom: 20px;
 }
 
 .subscribe-description {
@@ -624,18 +690,35 @@ body {
   width: 475px;
   font-size: 22px;
   line-height: 26px;
+  padding-bottom: 54px;
 }
 
 .subscribe-inner .subscribe-description {
   color: #333333;
 }
 
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+}
+
+.subscirbe-form-name {
+  margin: 0;
+}
+
 .subscirbe-form-name input {
+  box-sizing: border-box;
   font-size: 18px;
   line-height: 24px;
+  margin: 0;
+  padding: 0;
+  width: 452px;
+  height: 52px;
 }
 
 .subscribe-button {
+  padding: 0 50px;
+  height: 52px;
   background-color: #82B3D3;
   color: #ffffff;
   text-transform: uppercase;
@@ -650,43 +733,47 @@ body {
 .footer-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
 }
 
 .footer-social-list {
   display: flex;
+  max-width: 142px;
+  flex-wrap: wrap;
   padding: 0;
   list-style: none;
 }
 
-.footer-social-item:not(:last-child) {
-  margin-right: 25px;
+.footer-social-item, .footer-social-item .social-button::before {
+  width: 47.33px;
+  height: 40px;
 }
 
 .footer-social-item:nth-child(1) .social-button::before {
   content: "";
   display: block;
-  width: 24px;
-  height: 14px;
   background-image: url(../images/social/vkontakte.svg);
+  background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
 .footer-social-item:nth-child(2) .social-button::before {
   content: "";
   display: block;
-  width: 18px;
-  height: 16px;
   background-image: url(../images/social/telegram.svg);
+  background-position: 50% 50%;
   background-repeat: no-repeat;
+
 }
 
 .footer-social-item:nth-child(3) .social-button::before {
   content: "";
   display: block;
-  width: 22px;
-  height: 17px;
   background-image: url(../images/social/youtube.svg);
+  background-position: 50% 50%;
   background-repeat: no-repeat;
+
 }
 
 .footer-contacts {
