@@ -68,6 +68,9 @@ body {
 }
 
 .button {
+  padding: 8px 26px;
+  box-sizing: border-box;
+  min-height: 36px;
   background: #756157;
   color: #FFFFFF;
   text-align: center;
@@ -132,20 +135,24 @@ body {
   margin-right: 20px;
 }
 
-.navigation-item {
-  padding: 20px 16px;
-}
-
 .navigation-user-item {
   min-width: 20px;
   min-height: 20px;
-  padding: 22px 12px;
+  margin: auto;
 }
 
-.navigation-link, .navigation-user-link {
+.navigation-link {
   color: #333333;
   font-size: 20px;
   line-height: 24px;
+}
+
+.navigation-link {
+  padding: 20px 16px;
+}
+
+.navigation-user-link {
+  padding: 22px 12px;
 }
 
 .navigation-link-current {
@@ -155,26 +162,36 @@ body {
 
 .navigation-user-link-search::before {
   content: "";
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   width: 20px;
   height: 20px;
   background-image: url(../images/header/search.svg);
   background-repeat: no-repeat;
 }
 
-.navigation-user-link-favorite {
+.navigation-user-link-favorite::before {
   content: "";
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   width: 20px;
   height: 20px;
   background-image: url(../images/header/favorite.svg);
   background-repeat: no-repeat;
 }
 
+.navigation-user-item {
+  position: relative;
+}
+
 .notification-badge {
-  margin-left: 20px;
-  background: #7DB54F;
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background-color: #7DB54F;
+  padding: 5px;
   color: #ffffff;
+  border-radius: 10px;
   font-size: 10px;
   line-height: 10px;
 }
@@ -187,6 +204,7 @@ body {
   text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
+  border-radius: 4px;
 }
 
 
@@ -405,7 +423,9 @@ body {
 
 .search-button {
   display: block;
+  box-sizing: border-box;
   width: 380px;
+  min-height: 52px;
   padding: 8px 0;
   background-color: #756157;
   color: #ffffff;
@@ -430,7 +450,7 @@ body {
   background-size: 100% 100%;
   background-color: #000218;
   color: #ffffff;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 .inner-title {
@@ -572,21 +592,30 @@ body {
   margin-left: auto;
 }
 
-.button-apply {
+.button-apply, .button-reset {
+  box-sizing: border-box;
+  min-height: 36px;
   padding: 8px 50px;
+}
+
+.button-apply {
   background: #82B3D3;
   margin-bottom: 33px; /*Подгон (в макете 32px)*/
 }
 
 .button-reset {
-  padding: 8px 50px;
   background-color: transparent;
 }
 
 
 /* Catalog */
+.content-wrapper {
+  padding-top: 50px;
+}
+
 .sorting-container {
   display: flex;
+  align-items: center;
   margin-bottom: 40px;
 }
 
@@ -661,14 +690,26 @@ body {
 }
 
 /* Каталог отфильтрованных гостиниц */
+.catalog p {
+  margin: 0;
+}
+
 .catalog-list {
   margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   list-style: none;
   margin-bottom: 80px;
+  gap: 20px;
+}
+
+.catalog-item {
+  box-sizing: border-box;
+  max-width: 340px;
+  padding: 20px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
 }
 
 .catalog-link {
@@ -683,33 +724,40 @@ body {
   vertical-align: middle;
 }
 
-.catalog-description {
-  color: #333333;
-  font-size: 18px;
-  line-height: 21px;
+.catalog-description, .catalog-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.catalog-title {
+  margin: 0;
+  padding: 16px 0;
 }
 
 .catalog-price {
   font-weight: 400;
 }
 
-.button-more {
-  background: #756157;
-}
-
 .button-favorites {
+  padding: 8px 20px;
   background: #82B3D3;
 }
 
 .button-favorites-current {
+  padding: 8px 18px;
   background: #7DB54F;
 }
 
 .raiting {
-  background: #F2F2F2;
+  margin-top: auto;
+  /* background: #F2F2F2; */
 }
 
 .button-rating {
+  display: inline-block;
+  padding: 8px 23px;
   font-weight: 400;
   background: #F2F2F2;
   color: #333333;
@@ -842,15 +890,14 @@ body {
 
 .footer-social-list {
   display: flex;
-  max-width: 142px;
   flex-wrap: wrap;
   padding: 0;
   list-style: none;
 }
 
 .footer-social-item, .footer-social-item .social-button::before {
-  width: 47.33px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
 }
 
 .footer-social-item:nth-child(1) .social-button::before {
@@ -867,7 +914,6 @@ body {
   background-image: url(../images/social/telegram.svg);
   background-position: 50% 50%;
   background-repeat: no-repeat;
-
 }
 
 .footer-social-item:nth-child(3) .social-button::before {
@@ -876,7 +922,6 @@ body {
   background-image: url(../images/social/youtube.svg);
   background-position: 50% 50%;
   background-repeat: no-repeat;
-
 }
 
 .footer-contacts {
@@ -890,4 +935,9 @@ body {
   text-decoration: none;
   font-size: 40px;
   line-height: 40px;
+  padding: 20px;
+}
+
+.htmlacademy-link {
+  padding: 20px;
 }
