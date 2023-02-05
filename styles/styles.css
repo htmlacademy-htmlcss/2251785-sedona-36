@@ -599,7 +599,6 @@ body {
 }
 
 .button-apply, .button-reset {
-  display: block;
   padding: 8px 50px;
 }
 
