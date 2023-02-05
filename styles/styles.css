@@ -155,10 +155,11 @@ body {
   padding: 22px 12px;
 }
 
+/* Пока недоработано
 .navigation-link-current {
   padding-bottom: 18px;
   border-bottom: 2px solid #756257;
-}
+} */
 
 .navigation-user-link-search::before {
   content: "";
@@ -269,7 +270,7 @@ body {
   background: rgba(131, 179, 211, 0.12);
 }
 
-.advantages-item:nth-child(3) {
+.advantages-item:nth-child(odd) {
   background: rgba(131, 179, 211, 0.2);
 }
 
@@ -342,6 +343,7 @@ body {
 .infrastructure-list {
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
 }
 
@@ -350,7 +352,7 @@ body {
   padding: 82px 0;
 }
 
-.infrastructure-item:not(:nth-child(2)) {
+.infrastructure-item:not(:nth-child(2n)) {
   background: rgba(131, 179, 211, 0.12);
 }
 
@@ -470,11 +472,11 @@ body {
   margin-bottom: 40px;
 }
 
-.breadcrumbs-item:first-child {
+.breadcrumbs-item:nth-child(1) {
   padding-right: 10px;
 }
 
-.breadcrumbs-item:first-child a::before {
+.breadcrumbs-item:nth-child(1) a::before {
   content: "";
   display: inline-block;
   width: 12px;
@@ -484,7 +486,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.breadcrumbs-item:last-child a::before {
+.breadcrumbs-item:nth-child(2) a::before {
   content: "";
   display: inline-block;
   width: 7px;
@@ -622,7 +624,7 @@ body {
 /* Сортировка */
 .select-control {
   width: 292px;
-  height: 49px;
+  min-height: 49px;
   font-size: 18px;
   line-height: 21px;
   border: 2px solid #E5E5E5;
@@ -649,8 +651,6 @@ body {
 
 .catalog-method-link {
   display: block;
-  width: 48px;
-  height: 48px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
 }
@@ -768,7 +768,13 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
+}
+
+.pagination-item {
+  box-sizing: border-box;
+  margin-bottom: 8px;
 }
 
 .pagination-item:not(:last-child) {
@@ -822,7 +828,7 @@ body {
 .subscribe-inner {
   color: #000000;
   text-align: center;
-  padding-top: 96px;
+  padding-top: 88px; /*Из-за margin-bottom: 8px у элементов пагинации*/
   padding-bottom: 104px;
   margin-bottom: 40px;
 }
@@ -861,14 +867,14 @@ body {
   padding: 0;
   padding-left: 20px;
   width: 452px;
-  height: 52px;
+  min-height: 52px;
   border: none;
   border-radius: 4px 0 0 4px;
 }
 
 .subscribe-button {
   padding: 0 50px;
-  height: 52px;
+  min-height: 52px;
   background-color: #82B3D3;
   color: #ffffff;
   text-transform: uppercase;
@@ -892,10 +898,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
+  margin: 0;
   list-style: none;
 }
 
-.footer-social-item, .footer-social-item .social-button::before {
+.footer-social-item .social-button::before {
   width: 60px;
   height: 60px;
 }
