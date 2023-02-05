@@ -241,12 +241,12 @@ body {
 }
 
 .lead-advantages {
-  max-width: 620px;
+  width: 620px;
   padding-bottom: 25px;
 }
 
 .lead-infrastructure {
-  max-width: 505px;
+  width: 505px;
   padding-bottom: 20px;
 }
 
@@ -710,7 +710,7 @@ body {
 
 .catalog-item {
   box-sizing: border-box;
-  max-width: 340px;
+  width: 340px;
   padding: 20px;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
@@ -756,11 +756,10 @@ body {
 
 .raiting {
   margin-top: auto;
-  /* background: #F2F2F2; */
 }
 
 .button-rating {
-  display: inline-block;
+  display: block;
   padding: 8px 23px;
   font-weight: 400;
   background: #F2F2F2;
