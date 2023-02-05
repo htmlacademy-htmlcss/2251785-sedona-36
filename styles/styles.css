@@ -599,8 +599,7 @@ body {
 }
 
 .button-apply, .button-reset {
-  box-sizing: border-box;
-  min-height: 36px;
+  display: block;
   padding: 8px 50px;
 }
 
