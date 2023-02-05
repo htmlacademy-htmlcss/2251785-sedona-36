@@ -124,7 +124,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  list-style: none;
+  list-style-type: none;
 }
 
 .navigation-list {
@@ -226,6 +226,10 @@ body {
   margin-bottom: 25px;
 }
 
+.divider {
+  margin-bottom: -4px; /* Подгон */
+}
+
 /* Advantages */
 .lead-container {
   margin-bottom: 70px;
@@ -261,7 +265,7 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
+  list-style-type: none;
   margin-bottom: 64px;
 }
 
@@ -344,7 +348,7 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
+  list-style-type: none;
 }
 
 .infrastructure-item {
@@ -467,7 +471,7 @@ body {
 .breadcrumbs-list {
   padding: 0;
   margin: 0;
-  list-style: none;
+  list-style-type: none;
   display: flex;
   margin-bottom: 40px;
 }
@@ -511,7 +515,7 @@ body {
 .filter-form-group ul {
   padding: 0;
   margin: 0;
-  list-style: none;
+  list-style-type: none;
 }
 
 .filter-form-group:nth-of-type(1), .filter-form-group:nth-of-type(2) {
@@ -642,7 +646,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  list-style: none;
+  list-style-type: none;
 }
 
 .catalog-method-item:not(:last-child) {
@@ -699,7 +703,7 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
+  list-style-type: none;
   margin-bottom: 80px;
   gap: 20px;
 }
@@ -769,7 +773,7 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
+  list-style-type: none;
 }
 
 .pagination-item {
@@ -899,7 +903,7 @@ body {
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
-  list-style: none;
+  list-style-type: none;
 }
 
 .footer-social-item .social-button::before {
