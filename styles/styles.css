@@ -453,7 +453,7 @@ body {
   padding-bottom: 70px;
   background-image: url(../images/filter.jpg);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-color: #000218;
   color: #ffffff;
   /* margin-bottom: 50px; */
@@ -819,7 +819,7 @@ body {
 .subscribe {
   background-image: url(../images/subscribe.jpg);
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   background-color: #000218;
   color: #ffffff;
   text-align: center;
@@ -854,6 +854,7 @@ body {
 
 .subscribe-form {
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
