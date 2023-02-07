@@ -732,8 +732,9 @@ body {
 }
 
 .catalog-picture {
-  vertical-align: middle;
+  display: block;
   object-fit: contain;
+  margin: 0 auto;
 }
 
 .catalog-title {
