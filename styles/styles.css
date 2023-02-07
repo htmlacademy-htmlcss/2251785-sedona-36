@@ -730,6 +730,7 @@ body {
 
 .catalog-picture {
   vertical-align: middle;
+  object-fit: contain
 }
 
 .catalog-description, .catalog-button {
@@ -864,6 +865,11 @@ body {
   justify-content: center;
 }
 
+.subscribe-form-name {
+  margin: 0;
+  display: flex;
+}
+
 .subscribe-form input {
   box-sizing: border-box;
   background-color: #F2F2F2;;
@@ -874,6 +880,7 @@ body {
   padding-left: 20px;
   border: none;
   border-radius: 4px 0 0 4px;
+  flex-grow: 1;
 }
 
 .subscribe-button {
