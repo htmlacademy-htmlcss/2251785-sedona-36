@@ -476,29 +476,32 @@ body {
   margin-bottom: 40px;
 }
 
-.breadcrumbs-item:nth-child(1) {
-  padding-right: 10px;
+.breadcrumbs-item {
+  position: relative;
 }
 
-.breadcrumbs-item:nth-child(1) a::before {
+.breadcrumbs-item:not(:last-child) {
+  padding-right: 40px;
+}
+
+.breadcrumbs-item:not(:last-child) a::after {
   content: "";
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  background-image: url(../images/breadcrumbs/main.svg);
+  position: absolute;
+  left: 23px;
+  width: 7px;
+  height: 21px;
+  background-image: url(../images/breadcrumbs/arrow.svg);
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
-.breadcrumbs-item:nth-child(2) a::before {
-  content: "";
-  display: inline-block;
-  width: 7px;
-  height: 10px;
-  background-image: url(../images/breadcrumbs/arrow.svg);
-  background-repeat: no-repeat;
+.breadcrumbs-item:nth-child(1) a {
+  position: absolute;
+  width: 40px;
+  height: 21px;
+  background-image: url(../images/breadcrumbs/main.svg);
   background-position: 0 50%;
-  padding-right: 10px;
+  background-repeat: no-repeat;
 }
 
 /* Filter */
@@ -667,7 +670,7 @@ body {
   width: 48px;
   height: 48px;
   background-image: url(../images/catalog-method/little-cards.svg);
-  background-position: 49% 50%; /* Подгон */
+  background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
@@ -677,7 +680,7 @@ body {
   width: 48px;
   height: 48px;
   background-image: url(../images/catalog-method/big-cards.svg);
-  background-position: 49% 50%;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
@@ -687,7 +690,7 @@ body {
   width: 48px;
   height: 48px;
   background-image: url(../images/catalog-method/list.svg);
-  background-position: 49% 50%;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
@@ -699,22 +702,28 @@ body {
 .catalog-list {
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
   list-style-type: none;
   margin-bottom: 80px;
-  gap: 20px;
+  grid-gap: 20px;
 }
 
 .catalog-item {
-  box-sizing: border-box;
-  width: 340px;
+  display: grid;
+  grid-template-columns: auto auto;
   padding: 20px;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
+  grid-row-gap: 16px;
+  grid-column-gap: 20px;
 }
 
-.catalog-link {
+.catalog-title-link, .catalog-picture-link {
+  grid-column: 1 / -1;
+}
+
+.catalog-title-link {
   color: #000000;
   text-decoration: none;
   font-weight: 700;
@@ -723,22 +732,17 @@ body {
 }
 
 .catalog-picture {
-  vertical-align: middle;
-}
-
-.catalog-description, .catalog-button {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 16px;
+  display: block;
+  object-fit: contain;
+  margin: 0 auto;
 }
 
 .catalog-title {
   margin: 0;
-  padding: 16px 0;
 }
 
 .catalog-price {
+  text-align: right;
   font-weight: 400;
 }
 
@@ -762,6 +766,8 @@ body {
   font-weight: 400;
   background: #F2F2F2;
   color: #333333;
+  grid-column: 1 / -1;
+  justify-self: right;
 }
 
 /* Пагинация */
@@ -851,17 +857,17 @@ body {
 }
 
 .subscribe-form {
-  display: flex;
+  display: grid;
+  grid-template-columns: 452px 232px;
   justify-content: center;
-
 }
 
-.subscirbe-form-name {
+.subscribe-form-name {
   margin: 0;
-  min-height: 52px;
+  display: flex;
 }
 
-.subscirbe-form-name input {
+.subscribe-form input {
   box-sizing: border-box;
   background-color: #F2F2F2;;
   font-size: 18px;
@@ -869,21 +875,19 @@ body {
   margin: 0;
   padding: 0;
   padding-left: 20px;
-  width: 452px;
-  min-height: 52px;
   border: none;
   border-radius: 4px 0 0 4px;
+  flex-grow: 1;
 }
 
 .subscribe-button {
-  padding: 0 50px;
-  min-height: 52px;
   background-color: #82B3D3;
   color: #ffffff;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
+  min-height: 52px;
   border: none;
   border-radius: 0 4px 4px 0;
 }
