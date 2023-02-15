@@ -245,9 +245,10 @@ body {
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-color: #000218;
-  color: #ffffff;
+  color: #15994c;
   text-align: center;
-
+  height: 486px;
+  position: relative;
 }
 
 .hero-picture {
@@ -257,7 +258,10 @@ body {
 }
 
 .divider {
-  margin-bottom: -4px; /* Подгон */
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 
 /* Advantages */
@@ -500,7 +504,7 @@ body {
 
 .breadcrumbs-item {
   position: relative;
-  margin-right: 40px
+  margin-right: 28px
 }
 
 .breadcrumbs-item::after {
@@ -518,19 +522,23 @@ body {
   content: none;
 }
 
-.breadcrumbs-item:nth-child(1) a{
-  position: absolute;
-  top: 4px;
-  width: 12px;
-  height: 12px;
-  background-image: url(../images/breadcrumbs/main.svg);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-
 .breadcrumbs-link {
   color: #FFFFFF;
   text-decoration: none;
+}
+
+.breadcrumbs-icon {
+  fill: #ffffff;
+}
+
+.breadcrumbs-link:hover, .breadcrumbs-icon:hover {
+  color: rgba(255, 255, 255, 0.6);
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:active, .breadcrumbs-icon:active {
+  color: rgba(255, 255, 255, 0.3);
+  fill: rgba(255, 255, 255, 0.3);
 }
 
 /* Filter */
@@ -635,8 +643,13 @@ body {
 }
 
 .button-apply {
-  background: #82B3D3;
+  background-color: #82B3D3;
   margin-bottom: 33px; /*Подгон (в макете 32px)*/
+}
+
+.button-apply:disabled {
+  background-color: #E5E5E5;
+  color: #FFFFFF;
 }
 
 .button-reset {
@@ -654,6 +667,10 @@ body {
 
 .button-reset:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.button-reset:disabled {
+  color: rgba(255, 255, 255, 0.1);
 }
 
 /* Catalog */
@@ -700,7 +717,7 @@ body {
   border: 2px solid #3F5E72;
 }
 
-.select-control:disabled {
+.select-control:disabled { /* Ещё не доделано */
   border: 2px solid rgba(0, 0, 0, 0.3);
   color: rgba(0, 0, 0, 0.3);
 }
@@ -1028,6 +1045,10 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
+.subscribe-button:disabled {
+  background-color: #E5E5E5;
+  color: #FFFFFF;
+}
 
 /* Footer */
 .footer-container {
