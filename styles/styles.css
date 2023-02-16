@@ -368,10 +368,6 @@ body {
 }
 
 /* Infrastructure */
-.infrastructure {
-
-}
-
 .infrastructure-list {
   padding: 0;
   margin: 0;
@@ -572,7 +568,7 @@ body {
 }
 
 .filter-form-group:nth-of-type(3) {
-  width: 292px;
+  width: 288px;
   margin-right: 70px;
 }
 
@@ -588,11 +584,70 @@ body {
 }
 
 .control { /*label*/
+  position: relative;
+  display: block;
+  padding-left: 36px;
   font-size: 18px;
   line-height: 23px;
 }
 
-.filter-form-group:last-of-type .control:first-of-type {
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+}
+
+.filter-form-group:nth-of-type(2) .control-mark {
+  background-color: #FFFFFF;
+  border-radius: 50%;
+}
+
+.control:hover .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.control:hover .control-label {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.control:focus .control-mark {
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.control:active .control-mark {
+  outline: 2px solid #83B3D3;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+}
+
+.control:focus .control-mark-house {
+  border-radius: 50%;
+}
+
+.control:active .control-mark-house {
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
+
+.control:active .control-label {
+  color: #FFFFFF;
+}
+
+.control-input:disabled ~ .control-mark {
+  background-color: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
+.control-input:disabled ~ .control-label {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.filter-form-group:last-of-type .control-input:first-of-type {
   margin-right: -3px; /*Подгон*/
 }
 
@@ -602,7 +657,26 @@ body {
   line-height: 24px;
 }
 
-.control-input[name="from"], .control-input[name="to"] {
+.control-input[type="checkbox"]:checked + .control-mark {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/filter-form/tick.svg);
+  background-position: 50% 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3F5E72;
+}
+
+.control-input[type="text"] {
   box-sizing: border-box;
   background: #F2F2F2;
   border: none;
@@ -624,18 +698,68 @@ body {
   padding-right: 20px;
 }
 
+.control-input[type="text"]:hover {
+  background-color: #E6E6E6;
+}
+
+.control-input:not(:placeholder-shown):hover {
+  outline: 2px solid #000000;
+}
+
+.control-input[type="text"]:focus-visible {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
 .filter-form-group:last-of-type .control-input {
   width: 143px;
 }
 
-.button-price-container {
+.range-scale {
+  position: relative;
   margin-top: 36px;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 4px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #FFFFFF;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-min {
+  top: -8px;
+  left: -10px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
+.range-toggle:focus-visible {
+  outline: 3px solid #83B3D3;
+}
+
+.range-toggle:active {
+  outline: 2px solid #83B3D3;
 }
 
 .button-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  margin-top: 56px;
   margin-left: auto;
 }
 
@@ -651,6 +775,7 @@ body {
 .button-apply:disabled {
   background-color: #E5E5E5;
   color: #FFFFFF;
+  cursor: default;
 }
 
 .button-reset {
@@ -672,6 +797,7 @@ body {
 
 .button-reset:disabled {
   color: rgba(255, 255, 255, 0.1);
+  cursor: default;
 }
 
 /* Catalog */
@@ -697,9 +823,9 @@ body {
   margin-left: auto;
   margin-right: 70px;
   /*Стрелка у select*/
-  /* appearance: none;
-  background: url(../images/) no-repeat right;
-  background-position-x: calc(100% - 20px); */
+  appearance: none;
+  background: url(../images/sorting/arrow.svg) no-repeat right;
+  background-position-x: calc(100% - 20px);
 }
 
 .select-control:hover {
@@ -721,6 +847,10 @@ body {
 .select-control:disabled { /* Ещё не доделано */
   border: 2px solid rgba(0, 0, 0, 0.3);
   color: rgba(0, 0, 0, 0.3);
+  cursor: default;
+  fill: rgba(0, 0, 0, 0.3);
+  background: url(../images/sorting/arrow-disabled.svg) no-repeat right;
+  background-position-x: calc(100% - 20px);
 }
 
 .catalog-method-list {
@@ -1021,16 +1151,16 @@ body {
   background-color: #E6E6E6;
 }
 
-/* .subscribe-form input:focus-visible {
+.subscribe-form input:focus-visible {
   outline: 3px solid #83B3D3;
-} */
+}
 
 .subscribe-form input:not(:placeholder-shown) {
   color: #000000;
   font-weight: 700;
 }
 
-.subscribe-form input:not(:placeholder-shown):focus {
+.subscribe-form input:not(:placeholder-shown):focus-visible {
   outline: 2px solid #000000;
 }
 
@@ -1049,6 +1179,7 @@ body {
 .subscribe-button:disabled {
   background-color: #E5E5E5;
   color: #FFFFFF;
+  cursor: default;
 }
 
 /* Footer */
