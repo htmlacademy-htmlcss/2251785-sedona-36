@@ -115,6 +115,19 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.field:hover {
+  background: #E6E6E6;
+}
+
+.field:focus-visible {
+  background: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.field:not(:placeholder-shown):hover {
+  outline: 2px solid #000000;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -929,6 +942,7 @@ body {
 }
 
 .catalog-item {
+  position: relative;
   display: grid;
   grid-template-columns: auto auto;
   padding: 20px;
@@ -1003,6 +1017,30 @@ body {
   justify-self: right;
 }
 
+.button-rating::before {
+  content: '';
+  background-image: url(../images/catalog/star.svg);
+  position: absolute;
+  left: 20px;
+  bottom: 30px;
+  display: inline-block;
+  width: 22px;
+  height: 18px;
+  background-repeat: repeat-x;
+}
+
+.catalog-item:nth-child(1) .button-rating::before, .catalog-item:nth-child(2) .button-rating::before {
+  width: 92px;
+}
+
+.catalog-item:nth-child(3) .button-rating::before {
+  width: 68px;
+}
+
+.catalog-item:nth-child(4) .button-rating::before {
+  width: 44px;
+}
+
 .button-rating:hover {
   color:#000000;
 }
@@ -1011,7 +1049,7 @@ body {
   opacity: 0.6;
 }
 
-.button-rating:focus {
+.button-rating:focus-visible {
   outline: none;
   opacity: 0.6;
 }
@@ -1270,4 +1308,281 @@ body {
 
 .htmlacademy-link:active .htmlacademy-logo {
   fill: rgba(117, 97, 87, 0.3);
+}
+
+
+/*-- Modal --*/
+.modal-container {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  background-color: #FFFFFF;
+  padding: 64px 70px;
+  border-radius: 30px;
+}
+
+.modal-search {
+  width: 577px;
+  min-height: 448px;
+}
+
+.modal-close {
+  display: none;
+}
+
+.modal-button {
+  padding: 0;
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  top: 64px;
+  right: 64px;
+  border: none;
+  background-color: #F2F2F2;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal-button:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-button:focus-visible {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.modal-button::before, .modal-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 2px;
+  background-color: #000;
+}
+
+.modal-button::before {
+  transform: translateX(-9px) translateY(-1px) rotate(45deg);
+}
+
+.modal-button::after {
+  transform: translateX(-9px) translateY(-1px) rotate(-45deg);
+}
+
+.modal-button:active::before, .modal-button:active::after {
+  background-color: rgba(117, 97, 87, 0.3);
+}
+
+.modal-title {
+  margin: 0;
+  color: #000;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  margin-bottom: 64px;
+}
+
+.field-group, .input-container {
+  margin-bottom: 24px;
+}
+
+.field-group-container {
+  display: flex;
+}
+
+.input-status {
+  margin-left: 157px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.input-status-error {
+  color: #FF5757;
+}
+
+.search-form-label {
+  align-self: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  width: 137px;
+}
+
+.form-label-icon {
+  width: 130px;
+}
+
+.search-form-field {
+  box-sizing: border-box;
+  width: 440px;
+  height: 48px;
+  padding-left: 20px;
+  color: #000;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  border: none;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+  background-image: url(../images/modal/date.svg);
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 20px);
+  background-position-y: 50%;
+}
+
+.input-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.counter-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.tooltip {
+  margin-left: 10px;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+}
+
+.tooltip-toogle {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  display: block;
+}
+
+.tooltip-text {
+  box-sizing: border-box;
+  width: 256px;
+  margin: 0;
+  background-color: #333333;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  border-radius: 10px;
+  padding: 15px 18px 18px 22px;
+  position: absolute;
+  margin-top: 15px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: none;
+}
+
+.tooltip-text::before {
+  content: '';
+  position: absolute;
+  width: 19px;
+  height: 9px;
+  left: 50%;
+  bottom: 100%;
+  transform: translateX(-50%);
+  background-image: url(../images/tooltip-arrow.svg);
+}
+
+.tooltip-toogle:focus {
+  outline: none;
+}
+
+.tooltip-toogle:hover {
+  cursor: pointer;
+}
+
+.tooltip-toogle:hover + .tooltip-text,
+.tooltip-toogle:focus + .tooltip-text {
+  display: block;
+}
+
+.search-form-counter {
+  padding: 0;
+  vertical-align: middle;
+  width: 31px;
+  height: 48px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000;
+  border: none;
+  background: #F2F2F2;
+}
+
+.button-minus {
+  background-image: url(../images/modal/minus-grey.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  margin-right: -5px;
+  border-radius: 4px 0 0 4px;
+  cursor: pointer;
+}
+
+.button-plus {
+  background-image: url(../images/modal/plus-grey.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  margin-left: -5px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.button-plus:after {
+  transform: translateX(-7px) rotate(90deg);
+}
+
+.button-minus, .button-plus {
+  position: relative;
+  width: 40px;
+}
+
+.button-minus:hover {
+  background-image: url(../images/modal/minus.svg);
+}
+
+.button-plus:hover {
+  background-image: url(../images/modal/plus.svg);
+}
+
+.button-minus:active {
+  background-image: url(../images/modal/minus-grey.svg);
+}
+
+.button-plus:active {
+  background-image: url(../images/modal/plus-grey.svg);
+}
+
+.button-minus:focus-visible, .button-plus:focus-visible {
+  outline: 3px solid #82B3D3;
+}
+
+.counter-group-container {
+  margin: 0;
+  padding: 0;
+}
+
+.search-form-button {
+  width: 100%;
+  min-height: 60px;
+  background-color: #83B3D3;
+  border-radius: 10px;
 }
