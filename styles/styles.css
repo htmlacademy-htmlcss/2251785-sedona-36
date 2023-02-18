@@ -186,6 +186,15 @@ body {
   margin-bottom: -10px;
 }
 
+.logo-header:hover, .logo-header:focus-visible {
+  opacity: 0.6;
+  outline: none;
+}
+
+.logo-header:active {
+  opacity: 0.3;
+}
+
 .navigation {
   display: flex;
   flex-grow: 1;
@@ -534,13 +543,12 @@ body {
 
 .breadcrumbs-item {
   position: relative;
-  margin-right: 28px
 }
 
 .breadcrumbs-item::after {
   content: "";
   position: absolute;
-  left: 23px;
+  transform: translateX(-18px);
   width: 7px;
   height: 21px;
   background-image: url(../images/breadcrumbs/arrow.svg);
@@ -555,19 +563,30 @@ body {
 .breadcrumbs-link {
   color: #FFFFFF;
   text-decoration: none;
+  padding: 20px;
+  padding-right: 28px;
+  margin-left: -20px;
 }
 
 .breadcrumbs-icon {
   fill: #ffffff;
 }
 
-.breadcrumbs-link:hover, .breadcrumbs-icon:hover {
+.breadcrumbs-link:hover, .breadcrumbs-link:focus {
   color: rgba(255, 255, 255, 0.6);
-  fill: rgba(255, 255, 255, 0.6);
+  outline: none;
 }
 
-.breadcrumbs-link:active, .breadcrumbs-icon:active {
+.breadcrumbs-link:hover .breadcrumbs-icon, .breadcrumbs-link:focus .breadcrumbs-icon {
+  fill: rgba(255, 255, 255, 0.6);
+  outline: none;
+}
+
+.breadcrumbs-link:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs-link:active .breadcrumbs-icon {
   fill: rgba(255, 255, 255, 0.3);
 }
 
@@ -631,7 +650,7 @@ body {
   width: 20px;
   height: 20px;
   background-color: #FFFFFF;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 .filter-form-group:nth-of-type(2) .control-mark {
@@ -649,12 +668,10 @@ body {
 
 .control:focus-within .control-mark {
   outline: 3px solid #83B3D3;
-  border-radius: 4px;
 }
 
 .control:active .control-mark {
   outline: 2px solid #83B3D3;
-  border-radius: 5px;
   background-color: #FFFFFF;
 }
 
@@ -975,12 +992,32 @@ body {
   grid-column: 1 / -1;
 }
 
+.catalog-picture-link:hover, .catalog-picture-link:focus-visible {
+  opacity: 0.6;
+  outline: none;
+}
+
+.catalog-picture-link:active {
+  opacity: 0.3;
+}
+
 .catalog-title-link {
   color: #000000;
   text-decoration: none;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  padding: 10px;
+  margin: -10px;
+}
+
+.catalog-title-link:hover, .catalog-title-link:focus-visible {
+  opacity: 0.6;
+  outline: none;
+}
+
+.catalog-title-link:active {
+  opacity: 0.3;
 }
 
 .catalog-picture {
@@ -1008,16 +1045,12 @@ body {
   justify-self: right;
 }
 
-.button-rating:hover {
-  color:#000000;
+.button-rating:hover, .button-rating:focus-visible {
+  opacity: 0.8;
+  outline: none;
 }
 
 .button-rating:active {
-  opacity: 0.6;
-}
-
-.button-rating:focus-visible {
-  outline: none;
   opacity: 0.6;
 }
 
