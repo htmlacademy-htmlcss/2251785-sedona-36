@@ -1526,6 +1526,14 @@ body {
   background: #F2F2F2;
 }
 
+.counter {
+
+}
+
+.counter:focus {
+  outline: 3px solid #82B3D3;
+}
+
 .button-minus {
   background-image: url(../images/modal/minus-grey.svg);
   background-repeat: no-repeat;
@@ -1550,7 +1558,15 @@ body {
 
 .button-minus, .button-plus {
   position: relative;
+  appearance: none;
   width: 40px;
+}
+
+input::-webkit-outer-spin-button, /* Убирает стрелочки у input:number */
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .button-minus:hover {
