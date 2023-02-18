@@ -539,6 +539,7 @@ body {
   list-style-type: none;
   display: flex;
   margin-bottom: 40px;
+  margin-left: -10px;
 }
 
 .breadcrumbs-item {
@@ -548,7 +549,7 @@ body {
 .breadcrumbs-item::after {
   content: "";
   position: absolute;
-  transform: translateX(-18px);
+  display: inline-block;
   width: 7px;
   height: 21px;
   background-image: url(../images/breadcrumbs/arrow.svg);
@@ -563,9 +564,11 @@ body {
 .breadcrumbs-link {
   color: #FFFFFF;
   text-decoration: none;
-  padding: 20px;
-  padding-right: 28px;
-  margin-left: -20px;
+  padding: 20px 10px;
+}
+
+.breadcrumbs-link:not(.breadcrumbs-item:first-child .breadcrumbs-link) {
+  margin-left: 7px;
 }
 
 .breadcrumbs-icon {
