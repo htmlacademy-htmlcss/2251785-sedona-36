@@ -31,6 +31,11 @@ body {
   background-color: #f2f2f2;
 }
 
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .page-container {
   margin: 0 auto;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -167,7 +172,8 @@ body {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -861,10 +867,10 @@ body {
 .button-apply,
 .button-reset {
   padding: 8px 40px;
+  min-width: 190px;
 }
 
 .button-apply {
-  width: 190px;
   margin-bottom: 33px; /*подгон (в макете 32px)*/
 }
 
@@ -921,7 +927,8 @@ body {
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   /*стрелка у select*/
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   background: url("../images/sorting/arrow.svg") no-repeat right;
   background-position-x: calc(100% - 20px);
 }
@@ -1213,6 +1220,7 @@ body {
   color: #000000;
   background-color: #ffffff;
   border: none;
+  cursor: default;
 }
 
 .pagination-link-current,
@@ -1222,6 +1230,14 @@ body {
   color: #000000;
   background-color: #f2f2f2;
   border: none;
+  cursor: default;
+}
+
+.pagination-link-none:hover,
+.pagination-link-current:hover,
+.pagination-link-none:focus-visible,
+.pagination-link-current:focus-visible {
+  outline: 1px solid #82b3d3;
 }
 /*-------------------- --------------------*/
 
@@ -1560,6 +1576,10 @@ body {
   margin: 0;
 }
 
+.counter-form-name {
+  display: inline;
+}
+
 .tooltip {
   position: absolute;
   width: 26px;
@@ -1664,13 +1684,15 @@ body {
 .button-plus {
   position: relative;
   width: 40px;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 input::-webkit-outer-spin-button, /* убирает стрелочки у input:number */
 input::-webkit-inner-spin-button {
   margin: 0;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 .button-minus:hover {
