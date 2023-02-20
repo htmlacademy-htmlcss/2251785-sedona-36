@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+    <link rel="icon" sizes="32x32" href="favicon.ico">
     <link rel="stylesheet" href="styles/styles.css">
     <base href="https://htmlacademy-htmlcss.github.io/2251785-sedona-36/9/">
 </head>
@@ -60,10 +60,10 @@
         <section class="advantages" data-test="advantages">
           <h2 class="visually-hidden">Преимущества</h2>
           <div class="lead-container">
-            <p class="lead-advantages title">
+            <p class="lead-title title">
               Седона — небольшой городок в Аризоне, заслуживающий большего!
             </p>
-            <p>
+            <p class="lead-description">
               Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
             </p>
           </div>
@@ -71,26 +71,26 @@
           <ul class="advantages-list">
             <li class="advantages-item-wide">
               <div class="item-container">
-                <h3 class="advantages-title">Настоящий городок</h3>
+                <h3 class="advantages-title">Настоящий <br> городок</h3>
                 <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
               <img class="advantages-picture" src="images/advantages/photo-1.jpg" width="800" height="384" alt="Город Седона.">
             </li>
             <li class="advantages-item">
-              <h3 class="advantages-title">Небольшая площадь</h3>
+              <h3 class="advantages-title">Небольшая <br> площадь</h3>
               <p class="advantages-description">Все достопримечательности находятся очень близко</p>
             </li>
             <li class="advantages-item">
-              <h3 class="advantages-title">Красивая дорога</h3>
+              <h3 class="advantages-title">Красивая <br> дорога</h3>
               <p class="advantages-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
             <li class="advantages-item">
-              <h3 class="advantages-title">Мало туристов</h3>
+              <h3 class="advantages-title">Мало <br> туристов</h3>
               <p class="advantages-description">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
             <li class="advantages-item-wide">
               <div class="item-container">
-                <h3 class="advantages-title">Там есть мост дьявола</h3>
+                <h3 class="advantages-title">Там есть <br> мост дьявола</h3>
                 <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
               <img class="advantages-picture" src="images/advantages/photo-2.jpg" width="800" height="384" alt="Мост Дьявола.">
@@ -103,7 +103,7 @@
               <p class="lead-infrastructure title">
                 Приезжайте в Седону отдохнуть в комфорте и уюте!
               </p>
-              <p>
+              <p class="lead-description">
                 Опытный персонал и качественное обслуживание!
               </p>
             </div>
@@ -112,19 +112,19 @@
               <li class="infrastructure-item">
                 <h3 class="infrastructure-title">Жильё</h3>
                 <p class="infrastructure-description">
-                  Рекомендуем пожить в настоящем мотеле, всё как в кино!
+                  Рекомендуем пожить <br> в настоящем мотеле, <br> всё как в кино!
                 </p>
               </li>
               <li class="infrastructure-item">
                 <h3 class="infrastructure-title">Еда</h3>
                 <p class="infrastructure-description">
-                  Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
+                  Всегда заказывайте <br> топовый фирменный бургер, <br> вы не разочаруетесь!
                 </p>
               </li>
               <li class="infrastructure-item">
                 <h3 class="infrastructure-title">Сувениры</h3>
                 <p class="infrastructure-description">
-                  Не только китайского, но и настоящего местного производства!
+                  Не только китайского, <br> но и настоящего местного <br> производства!
                 </p>
               </li>
             </ul>
@@ -134,7 +134,7 @@
         <section class="search" data-test="search">
           <h2 class="search-title title">Заинтересовались?</h2>
           <p class="search-decription">
-            Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
+            Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне
           </p>
           <a class="search-button button-brown" href="">Поиск гостиницы в Седоне</a>
         </section>
@@ -198,15 +198,15 @@
             <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
               <div class="field-group">
                 <div class="field-group-container">
-                  <label class="search-form-label" for="search-check-in">Дата заезда:</label>
+                  <label class="search-form-label" for="search-check-in">Дата Заезда:</label>
                   <input type="text" class="search-form-field field" id="search-check-in" name="search-check-in" placeholder="Укажите дату" value="27 апреля 2020">
                 </div>
                 <span class="input-status input-status-error">Мы не можем отправить вас в прошлое.</span>
               </div>
               <div class="field-group">
                 <div class="field-group-container">
-                  <label class="search-form-label" for="search-check-out">Дата выезда:</label>
-                  <input class="search-form-field field" type="text"id="search-check-out" name="search-check-out" placeholder="Укажите дату" value="1 сентября 2023">
+                  <label class="search-form-label" for="search-check-out">Дата Выезда:</label>
+                  <input class="search-form-field field" type="text" id="search-check-out" name="search-check-out" placeholder="Укажите дату" value="1 сентября 2023">
                 </div>
                 <span class="input-status">На эти даты есть свободные номера. Пока есть.</span>
               </div>
@@ -215,7 +215,7 @@
                   <label class="search-form-label" for="adults">Взрослые:</label>
                   <div class="counter-group-container">
                     <button class="search-form-counter button-minus"></button>
-                    <input class="search-form-counter counter" type="text" name="adults" id="adults" value="2">
+                    <input class="search-form-counter counter" type="number" name="adults" id="adults" value="2">
                     <button class="search-form-counter button-plus"></button>
                   </div>
                 </div>
@@ -231,7 +231,7 @@
                   </span>
                   <div class="counter-group-container">
                     <button class="search-form-counter button-minus"></button>
-                    <input class="search-form-counter counter" type="text" name="childs" id="childs" value="2">
+                    <input class="search-form-counter counter" type="number" name="childs" id="childs" value="2">
                     <button class="search-form-counter button-plus"></button>
                   </div>
                 </div>
