@@ -454,7 +454,9 @@ img {
   flex-direction: column;
   justify-content: center;
   width: 400px;
-  height: 385px;
+  min-height: 385px;
+  box-sizing: border-box;
+  padding: 20px 0;
 }
 
 .infrastructure-item:not(:nth-child(2n)) {
@@ -640,10 +642,15 @@ img {
 
 /* filter */
 .filter-form {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 372px 549px;
+  column-gap: 140px;
   margin-top: -20px;
+}
+
+.filter-container {
+  display: flex;
+  column-gap: 70px;
 }
 
 .filter-form-group {
@@ -658,25 +665,13 @@ img {
   list-style-type: none;
 }
 
-.filter-form-group:nth-of-type(1),
-.filter-form-group:nth-of-type(2) {
-  width: 152px;
-}
-
-.filter-form-group:nth-of-type(1) {
-  margin-right: 68px;
-}
-
-.filter-form-group:nth-of-type(2) {
-  margin-right: 136px;
-}
-
 .filter-form-item:not(:last-child) {
   padding-bottom: 16px;
 }
 
 .filter-form-title { /*legend*/
   margin-bottom: 32px;
+  padding: 0;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -814,7 +809,6 @@ img {
 
 .range {
   width: 288px;
-  margin-right: 70px;
 }
 
 .range-scale {
@@ -1436,11 +1430,13 @@ img {
 
 .modal {
   position: relative;
+  max-height: 80vh;
   margin: auto;
   padding: 64px 70px;
   background-color: #ffffff;
   border-radius: 30px;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  overflow-y: auto; /*Добавляет прокрутку по оси y при переполнении*/
 }
 
 .modal input {
@@ -1466,7 +1462,7 @@ img {
 .modal-button {
   position: absolute;
   top: 64px;
-  right: 64px;
+  right: 52px;
   width: 52px;
   height: 52px;
   padding: 0;
