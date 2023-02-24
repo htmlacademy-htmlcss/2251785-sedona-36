@@ -454,7 +454,9 @@ img {
   flex-direction: column;
   justify-content: center;
   width: 400px;
-  height: 385px;
+  min-height: 385px;
+  box-sizing: border-box;
+  padding: 10px 0;
 }
 
 .infrastructure-item:not(:nth-child(2n)) {
