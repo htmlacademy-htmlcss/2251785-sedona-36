@@ -511,7 +511,7 @@ img {
 
 
 /* search */
-.search {
+.search-container {
   padding-top: 96px;
   padding-bottom: 91px;
   text-align: center;
@@ -1243,7 +1243,7 @@ img {
 
 
 /* subscirbe */
-.subscribe {
+.subscribe-container {
   padding-top: 96px;
   padding-bottom: 104px;
   background-image: url("../images/subscribe.jpg");
@@ -1254,7 +1254,7 @@ img {
   color: #ffffff;
 }
 
-.subscribe-inner {
+.subscribe-inner-container {
   text-align: center;
   padding-top: 148px; /*из-за margin-bottom: 8px у элементов пагинации*/
   padding-bottom: 104px;
@@ -1265,7 +1265,7 @@ img {
   padding-bottom: 20px;
 }
 
-.subscribe .subscribe-title {
+.subscribe-container .subscribe-title {
   color: #ffffff;
 }
 
@@ -1277,7 +1277,7 @@ img {
   line-height: 26px;
 }
 
-.subscribe-inner .subscribe-description {
+.subscribe-inner-container .subscribe-description {
   color: #333333;
 }
 
