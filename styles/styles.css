@@ -642,10 +642,15 @@ img {
 
 /* filter */
 .filter-form {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 372px 549px;
+  column-gap: 167px;
   margin-top: -20px;
+}
+
+.filter-container {
+  display: flex;
+  column-gap: 70px;
 }
 
 .filter-form-group {
@@ -658,19 +663,6 @@ img {
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.filter-form-group:nth-of-type(1),
-.filter-form-group:nth-of-type(2) {
-  width: 152px;
-}
-
-.filter-form-group:nth-of-type(1) {
-  margin-right: 68px;
-}
-
-.filter-form-group:nth-of-type(2) {
-  margin-right: 136px;
 }
 
 .filter-form-item:not(:last-child) {
@@ -816,7 +808,6 @@ img {
 
 .range {
   width: 288px;
-  margin-right: 70px;
 }
 
 .range-scale {
