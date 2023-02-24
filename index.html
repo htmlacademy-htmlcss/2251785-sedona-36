@@ -76,16 +76,22 @@
               <img class="advantages-picture" src="images/advantages/photo-1.jpg" width="800" height="384" alt="Город Седона.">
             </li>
             <li class="advantages-item">
-              <h3 class="advantages-title">Небольшая <br> площадь</h3>
-              <p class="advantages-description">Все достопримечательности находятся очень близко</p>
+              <div class="item-container">
+                <h3 class="advantages-title">Небольшая <br> площадь</h3>
+                <p class="advantages-description">Все достопримечательности находятся очень близко</p>
+              </div>
             </li>
             <li class="advantages-item">
-              <h3 class="advantages-title">Красивая <br> дорога</h3>
-              <p class="advantages-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              <div class="item-container">
+                <h3 class="advantages-title">Красивая <br> дорога</h3>
+                <p class="advantages-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              </div>
             </li>
             <li class="advantages-item">
-              <h3 class="advantages-title">Мало <br> туристов</h3>
-              <p class="advantages-description">Большинство едет в Гранд Каньон и толпится там</p>
+              <div class="item-container">
+                <h3 class="advantages-title">Мало <br> туристов</h3>
+                <p class="advantages-description">Большинство едет в Гранд Каньон и толпится там</p>
+              </div>
             </li>
             <li class="advantages-item-wide">
               <div class="item-container">
@@ -131,23 +137,27 @@
         </section>
         <!-- Поиск гостиницы -->
         <section class="search" data-test="search">
-          <h2 class="search-title title">Заинтересовались?</h2>
-          <p class="search-decription">
-            Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне
-          </p>
-          <a class="search-button button-brown" href="">Поиск гостиницы в Седоне</a>
+          <div class="search-container">
+            <h2 class="search-title title">Заинтересовались?</h2>
+            <p class="search-decription">
+              Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне
+            </p>
+            <a class="search-button button-brown" href="">Поиск гостиницы в Седоне</a>
+          </div>
         </section>
         <!-- Подписка на рассылку -->
         <section class="subscribe" data-test="subscribe">
-          <h2 class="subscribe-title title">Подпишитесь на рассылку</h2>
-          <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
-          <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <p class="subscribe-form-name">
-              <label class="visually-hidden" for="user-email">Ваш e-mail</label>
-              <input class="subscribe-field field" type="email" name="user-email" id="user-email" placeholder="Ваш e-mail">
-            </p>
-            <button class="subscribe-button button button-blue" type="submit">Подписаться</button>
-          </form>
+          <div class="subscribe-container">
+            <h2 class="subscribe-title title">Подпишитесь на рассылку</h2>
+            <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+            <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+              <p class="subscribe-form-name">
+                <label class="visually-hidden" for="user-email">Ваш e-mail</label>
+                <input class="subscribe-field field" type="email" name="user-email" id="user-email" placeholder="Ваш e-mail">
+              </p>
+              <button class="subscribe-button button button-blue" type="submit">Подписаться</button>
+            </form>
+          </div>
         </section>
       </main>
       <footer class="main-footer" data-test="footer">
@@ -189,7 +199,7 @@
       </footer>
       <div class="modal-container modal-close">
         <div class="modal modal-search">
-          <button class="modal-button">
+          <button class="modal-button" type="button">
             <span class="visually-hidden">Закрыть</span>
           </button>
           <section class="modal-content">
@@ -212,26 +222,32 @@
               <div class="input-container">
                 <div class="counter-group">
                   <label class="search-form-label" for="adults">Взрослые:</label>
-                  <div class="counter-group-container">
-                    <button class="search-form-counter button-minus"></button>
-                    <input class="search-form-counter counter" type="number" name="adults" id="adults" value="2">
-                    <button class="search-form-counter button-plus"></button>
+                  <div class="counter-group-container" id="adults">
+                    <button class="search-form-counter button-minus" type="button" aria-label="Минус"></button>
+                    <div class="counter-form-name">
+                      <label for="adults" class="visually-hidden">Количество</label>
+                      <input class="search-form-counter counter" type="number" name="adults" id="adults" value="2">
+                    </div>
+                    <button class="search-form-counter button-plus" type="button" aria-label="Плюс"></button>
                   </div>
                 </div>
                 <div class="counter-group">
                   <span class="search-form-label form-label-icon">
                     <label class="search-form-label" for="childs">Дети:</label>
                     <span class="tooltip">
-                      <button class="tooltip-toogle" aria-labelledby="tooltip-label-date">
+                      <button class="tooltip-toogle" aria-labelledby="tooltip-label-date" type="button">
                         <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><circle cx="13" cy="13" r="13" fill="#83B3D3"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" fill="#fff"/></svg>
                       </button>
                       <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
                     </span>
                   </span>
-                  <div class="counter-group-container">
-                    <button class="search-form-counter button-minus"></button>
-                    <input class="search-form-counter counter" type="number" name="childs" id="childs" value="2">
-                    <button class="search-form-counter button-plus"></button>
+                  <div class="counter-group-container" id="childs">
+                    <button class="search-form-counter button-minus" type="button" aria-label="Минус"></button>
+                    <div class="counter-form-name">
+                      <label for="adults" class="visually-hidden">Количество</label>
+                      <input class="search-form-counter counter" type="number" name="childs" id="childs" value="2">
+                    </div>
+                    <button class="search-form-counter button-plus" type="button" aria-label="Плюс"></button>
                   </div>
                 </div>
               </div>
