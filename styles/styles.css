@@ -300,19 +300,17 @@ img {
 
 .header-button {
   align-self: center;
-  width: 160px;
   padding: 8px 34px;
 }
 
 /* hero  */
 .hero {
-  position: relative;
-  height: 486px;
+  min-height: 485px;
   color: #15994c;
   text-align: center;
-  background-image: url("../images/hero-section/hero-background.jpg");
-  background-size: 100% auto;
+  background-image: url("../images/hero-section/divider.png"), url("../images/hero-section/hero-background.jpg");
   background-repeat: no-repeat;
+  background-position-y: bottom, 0%;
   background-color: #000218;
 }
 
@@ -320,13 +318,6 @@ img {
   margin-top: 52px;
   margin-bottom: 25px;
   vertical-align: middle;
-}
-
-.divider {
-  position: absolute;
-  right: 0;
-  left: 0;
-  bottom: 0;
 }
 
 /* advantages */
@@ -346,6 +337,7 @@ img {
 }
 
 .lead-description {
+  width: 651px;
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
@@ -520,6 +512,8 @@ img {
 }
 
 .search-title {
+  width: 297px;
+  margin: 0 auto;
   padding-bottom: 20px;
 }
 
@@ -567,6 +561,7 @@ img {
 }
 
 .inner-title {
+  width: 495px;
   margin: 0;
   margin-bottom: -12px;
   font-size: 60px;
@@ -1054,6 +1049,10 @@ img {
   border-radius: 4px;
 }
 
+.catalog-item p {
+  width: 140px;
+}
+
 .catalog-item .button {
   width: 140px;
 }
@@ -1094,6 +1093,7 @@ img {
 }
 
 .item-title {
+  width: 300px;
   margin: 0;
   font-size: 24px;
   line-height: 28px;
@@ -1121,7 +1121,6 @@ img {
 
 .button-rating {
   display: block;
-  width: 140px;
   margin-left: auto;
   padding: 9px 22px 8px 23px;
   font-weight: 400;
@@ -1265,6 +1264,8 @@ img {
 }
 
 .subscribe-title {
+  width: 404px;
+  margin: 0 auto;
   padding-bottom: 20px;
 }
 
