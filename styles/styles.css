@@ -88,7 +88,7 @@ img {
 }
 
 .button-brown {
-  padding: 8px 26px;
+  padding: 8px 0;
 }
 
 .button-brown:hover {
@@ -110,7 +110,7 @@ img {
 }
 
 .button-blue {
-  padding: 8px 20px;
+  padding: 8px 0;
   background-color: #82b3d3;
 }
 
@@ -133,7 +133,7 @@ img {
 }
 
 .button-green {
-  padding: 8px 18px;
+  padding: 8px 0;
   background-color: #7db54f;
 }
 
@@ -232,6 +232,11 @@ img {
   margin-right: 20px;
 }
 
+.navigation-list .navigation-link {
+  max-width: 130px;
+  box-sizing: border-box;
+}
+
 .navigation-link {
   position: relative;
   display: block;
@@ -299,8 +304,9 @@ img {
 }
 
 .header-button {
+  width: 160px;
   align-self: center;
-  padding: 8px 34px;
+  padding: 8px 0;
 }
 
 /* hero  */
@@ -337,7 +343,7 @@ img {
 }
 
 .lead-description {
-  width: 651px;
+  width: 652px;
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
@@ -561,7 +567,7 @@ img {
 }
 
 .inner-title {
-  width: 495px;
+  max-width: 900px;
   margin: 0;
   margin-bottom: -12px;
   font-size: 60px;
@@ -1122,7 +1128,8 @@ img {
 .button-rating {
   display: block;
   margin-left: auto;
-  padding: 9px 22px 8px 23px;
+  padding-top: 9px;
+  padding-bottom: 8px;
   font-weight: 400;
   color: #333333;
   background-color: #f2f2f2;
