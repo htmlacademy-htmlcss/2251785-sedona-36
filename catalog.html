@@ -129,10 +129,10 @@
                 <div class="range">
                   <div class="range-wrapper-inputs">
                     <label class="catalog-filter-label">
-                      <input class="control-input" type="text" name="from" value="0" placeholder="от">
+                      <input class="control-input" type="text" name="from" value="0" required>
                     </label>
                     <label class="catalog-filter-label">
-                      <input class="control-input" type="text" name="to" value="9000" placeholder="до">
+                      <input class="control-input" type="text" name="to" value="9000" required>
                     </label>
                   </div>
                   <div class="range-scale">
@@ -189,10 +189,14 @@
               <a class="catalog-title-link" href="#">
                 <h3 class="item-title">Amara Resort & Spa</h3>
               </a>
-              <p class="catalog-name">Гостиница</p>
-              <p class="catalog-price">От 4000 ₽</p>
-              <a class="button button-brown" href="#">Подробнее</a>
-              <a class="button button-blue" href="#">В избранное</a>
+              <div class="catalog-container">
+                <p class="catalog-name">Гостиница</p>
+                <p class="catalog-price">От 4000 ₽</p>
+              </div>
+              <div class="catalog-container">
+                <a class="button button-brown" href="#">Подробнее</a>
+                <a class="button button-blue" href="#">В избранное</a>
+              </div>
               <div class="item-rating">
                 <a class="button button-rating" href="#">Рейтинг: 8,5</a>
               </div>
@@ -204,10 +208,14 @@
               <a class="catalog-title-link" href="#">
                 <h3 class="item-title">Villas at Poco Diablo</h3>
               </a>
-              <p class="catalog-name">Гостиница</p>
-              <p class="catalog-price">От 5000 ₽</p>
-              <a class="button button-brown" href="#">Подробнее</a>
-              <a class="button button-green" href="#">В избранном</a>
+              <div class="catalog-container">
+                <p class="catalog-name">Гостиница</p>
+                <p class="catalog-price">От 5000 ₽</p>
+              </div>
+              <div class="catalog-container">
+                <a class="button button-brown" href="#">Подробнее</a>
+                <a class="button button-green" href="#">В избранном</a>
+              </div>
               <div class="item-rating">
                 <a class="button button-rating" href="#">Рейтинг: 9,2</a>
               </div>
@@ -219,10 +227,14 @@
               <a class="catalog-title-link" href="#">
                 <h3 class="item-title">Desert Quail Inn</h3>
               </a>
-              <p class="catalog-name">Гостиница</p>
-              <p class="catalog-price">От 2500 ₽</p>
-              <a class="button button-brown" href="#">Подробнее</a>
-              <a class="button button-blue" href="#">В избранное</a>
+              <div class="catalog-container">
+                <p class="catalog-name">Гостиница</p>
+                <p class="catalog-price">От 2500 ₽</p>
+              </div>
+              <div class="catalog-container">
+                <a class="button button-brown" href="#">Подробнее</a>
+                <a class="button button-blue" href="#">В избранное</a>
+              </div>
               <div class="item-rating">
                 <a class="button button-rating" href="#">Рейтинг: 6,9</a>
               </div>
@@ -234,10 +246,14 @@
               <a class="catalog-title-link" href="#">
                 <h3 class="item-title">GreenTree Inn</h3>
               </a>
-              <p class="catalog-name">Гостиница</p>
-              <p class="catalog-price">От 1500 ₽</p>
-              <a class="button button-brown" href="#">Подробнее</a>
-              <a class="button button-blue" href="#">В избранное</a>
+              <div class="catalog-container">
+                <p class="catalog-name">Гостиница</p>
+                <p class="catalog-price">От 1500 ₽</p>
+              </div>
+              <div class="catalog-container">
+                <a class="button button-brown" href="#">Подробнее</a>
+                <a class="button button-blue" href="#">В избранное</a>
+              </div>
               <div class="item-rating">
                 <a class="button button-rating" href="#">Рейтинг: 5,0</a>
               </div>
@@ -275,7 +291,7 @@
             <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
               <p class="subscribe-form-name">
                 <label for="user-email" class="visually-hidden">Ваш e-mail</label>
-                <input class="subscribe-field field" type="email" name="user-email" id="user-email" placeholder="Ваш e-mail">
+                <input class="subscribe-field field" type="email" name="user-email" id="user-email" placeholder="Ваш e-mail" required>
               </p>
               <button class="subscribe-button button button-blue" type="submit">Подписаться</button>
             </form>
