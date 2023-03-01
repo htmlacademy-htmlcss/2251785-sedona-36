@@ -821,6 +821,7 @@ img {
   width: 143px;
   height: 48px;
   box-sizing: border-box;
+  padding-right: 40px;
   padding-left: 20px;
   background-color: #f2f2f2;
   border: none;
